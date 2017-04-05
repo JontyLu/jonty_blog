@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://onxdlp2lu.bkt.clouddn.com/CN2.3.2.png">
 <meta property="og:image" content="http://onxdlp2lu.bkt.clouddn.com/3.2.1.png">
 <meta property="og:image" content="http://onxdlp2lu.bkt.clouddn.com/3.2.2.png">
-<meta property="og:updated_time" content="2017-04-05T10:05:29.220Z">
+<meta property="og:updated_time" content="2017-04-05T12:20:03.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络笔记整理">
 <meta name="twitter:description" content="Internet概览计算机网络是指多个独立自主的计算机通过通信链路互联起来的集合体，主要的功能有：  1 数据通信2 资源共享3 增强系统可靠性：单个部件或计算机暂时失效需要替换资源来维持系统的正常运行。4 提供系统处理能力：多台计算机协同操作和并行处理可以提高系统处理能力。">
@@ -397,11 +397,12 @@
 </li>
 <li><p>OSI七层模型</p>
 <p><img src="http://onxdlp2lu.bkt.clouddn.com/CN1.3.1.png" width="50%"></p>
-<p>其中，应用层、表示层和会话层在TCP/IP五层模型中属于应用层<br><img src="http://onxdlp2lu.bkt.clouddn.com/CN1.3.3.jpg" width="50%"></p>
-<center><em>图片来源<a href="https://m.baidu.com/from=1086k/bd_page_type=1/ssid=0/uid=0/pu=usm%401%2Csz%40320_1002%2Cta%40iphone_2_6.0_2_7.3/baiduid=83A227C8E27D3A9EE0498D3A5C177D3B/w=0_10_/t=iphone/l=3/tc?ref=www_iphone&lid=8717376967814535243&order=7&fm=alop&tj=www_normal_7_0_10_title&vit=osres&m=8&srd=1&cltj=cloud_title&asres=1&nt=wnor&title=%5BNetwork%5D%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93-Poll%E7%9A%84..._%E5%8D%9A%E5%AE%A2%E5%9B%AD&dict=30&w_qd=IlPT2AEptyoA_ykx9g1a-ROuE66Uf-EpzScWmejQrR5tPxU6Wyhcy7K&sec=19980&di=b7e9318cf697e692&bdenc=1&tch=124.279.261.1230.1.827&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ytK1DK6mlrte4viZQRAXz0mMnrIU-KdgTCccQoDlnCg27Uj8BVZhOgtfq&eqid=78fa582a63c1d8001000000158dfa225&wd=&clk_info=%7B%22srcid%22%3A%221599%22%2C%22tplname%22%3A%22www_normal%22%2C%22t%22%3A1491051059708%2C%22xpath%22%3A%22div-div-div2-a-p%22%7D" target="_blank" rel="external">点击此处</a></em></center>
-
+<p>其中，应用层、表示层和会话层在TCP/IP五层模型中属于应用层<br>会话层负责两个节点之间会话的建立、管理与终止以及数据的交换，表示层用于处理两个通信系统间交换信息的表示方式，主要包括数据格式变换，加密与解密，数据压缩与恢复等。<br>当我们进行大量的数据传输时，例如你正在下载一个100M 的文件，当下载到95M 时，网络断线了，这时怎么办？是否需要重头再传？为了解决这个问题，会话层提供了同步服务，<br>通过在数据流中定义检查点(Checkpoint)来把会话分割成明显的会话单元。当网络故障出现时，从最后一个检查点开始重传数据。</p>
 </li>
 </ul>
+<p><img src="http://onxdlp2lu.bkt.clouddn.com/CN1.3.3.jpg" width="50%"></p>
+<center><em>图片来源<a href="https://m.baidu.com/from=1086k/bd_page_type=1/ssid=0/uid=0/pu=usm%401%2Csz%40320_1002%2Cta%40iphone_2_6.0_2_7.3/baiduid=83A227C8E27D3A9EE0498D3A5C177D3B/w=0_10_/t=iphone/l=3/tc?ref=www_iphone&lid=8717376967814535243&order=7&fm=alop&tj=www_normal_7_0_10_title&vit=osres&m=8&srd=1&cltj=cloud_title&asres=1&nt=wnor&title=%5BNetwork%5D%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93-Poll%E7%9A%84..._%E5%8D%9A%E5%AE%A2%E5%9B%AD&dict=30&w_qd=IlPT2AEptyoA_ykx9g1a-ROuE66Uf-EpzScWmejQrR5tPxU6Wyhcy7K&sec=19980&di=b7e9318cf697e692&bdenc=1&tch=124.279.261.1230.1.827&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ytK1DK6mlrte4viZQRAXz0mMnrIU-KdgTCccQoDlnCg27Uj8BVZhOgtfq&eqid=78fa582a63c1d8001000000158dfa225&wd=&clk_info=%7B%22srcid%22%3A%221599%22%2C%22tplname%22%3A%22www_normal%22%2C%22t%22%3A1491051059708%2C%22xpath%22%3A%22div-div-div2-a-p%22%7D" target="_blank" rel="external">点击此处</a></em></center>
+
 <h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><p>作为和用户交互的最高层，其任务是为操作系统或者网络用用程序提供访问网络服务的接口。其具体内容就是规定应用进程在通信时所遵循的协议。</p>
 <h2 id="应用层通信模式"><a href="#应用层通信模式" class="headerlink" title="应用层通信模式"></a>应用层通信模式</h2><ol>
 <li>客户-服务器模式（C/S通信模式）<ul>
@@ -479,7 +480,8 @@
   客户端配置的本地域名服务器不能解析的话，后面的查询交给下一个服务器，一级级地传下去。
   &lt;img src=&quot;http://onxdlp2lu.bkt.clouddn.com/2.6.2.png&quot;&gt;
 </code></pre><h3 id="FTP-文件传输协议"><a href="#FTP-文件传输协议" class="headerlink" title="FTP(文件传输协议)"></a>FTP(文件传输协议)</h3><h3 id="Telnet（远程登陆协议）"><a href="#Telnet（远程登陆协议）" class="headerlink" title="Telnet（远程登陆协议）"></a>Telnet（远程登陆协议）</h3><h3 id="SMTP-简单邮件传输协议"><a href="#SMTP-简单邮件传输协议" class="headerlink" title="SMTP(简单邮件传输协议)"></a>SMTP(简单邮件传输协议)</h3><h1 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h1><p>传输层位于应用层和网络层之间，在两个应用层之间提供进程到进程的服务</p>
-<h2 id="传输层和网络层的区别"><a href="#传输层和网络层的区别" class="headerlink" title="传输层和网络层的区别"></a>传输层和网络层的区别</h2><p><table><tr><td></td><td>网络层</td><td>传输层</td></tr><tr><td>功能</td><td>主机之间的通信</td><td>进程之间的通信</td></tr><tr><td>协议</td><td>IP</td><td>UDP和TCP</td></tr><tr><td>特点</td><td>end-to-end</td><td>hop-by-hop</td></tr><tr><td>其他</td><td>网络层是为主机之间提供逻辑通信（面向主机，承担路由功能，即主机寻址及有效的分组交换）。</td><td>运输层处于面向通信部分的最高层，同时也是用户功能中的最低层，向它上面的应用层提供服务 ，运输层为应用进程之间提供端到端的逻辑通信。</td></tr></table></p>
+<h2 id="传输层和网络层的区别"><a href="#传输层和网络层的区别" class="headerlink" title="传输层和网络层的区别"></a>传输层和网络层的区别</h2><table><tr><td></td><td>网络层</td><td>传输层</td></tr><tr><td>功能</td><td>主机之间的通信</td><td>进程之间的通信</td></tr><tr><td>协议</td><td>IP</td><td>UDP和TCP</td></tr><tr><td>特点</td><td>end-to-end</td><td>hop-by-hop</td></tr><tr><td>其他</td><td>网络层是为主机之间提供逻辑通信（面向主机，承担路由功能，即主机寻址及有效的分组交换）。</td><td>运输层处于面向通信部分的最高层，同时也是用户功能中的最低层，向它上面的应用层提供服务 ，运输层为应用进程之间提供端到端的逻辑通信。</td></tr></table>
+
 <h2 id="UDP协议（不可靠的无连接传输协议）"><a href="#UDP协议（不可靠的无连接传输协议）" class="headerlink" title="UDP协议（不可靠的无连接传输协议）"></a>UDP协议（不可靠的无连接传输协议）</h2><p>面向连接可靠有序的传输，存在反馈消息，无错序，无重复，不丢包，进行流量和拥塞控制。数据就像在管道上面传输一样，先发的一定先到。通过字节流的传输方法，因此没有边界，接收方就卡成一个个字节流进来，接收端再进行封装。</p>
 <blockquote>
 <p>TCP层是位于IP层之上，应用层之下的中间层。不同主机的应用层之间经常需要可靠的、像管道一样的连接，但是IP层不提供这样的流机制，而是提供不可靠的包交换. ——百度百科</p>
@@ -530,7 +532,96 @@
 </ol>
 <h2 id="路由分组方法"><a href="#路由分组方法" class="headerlink" title="路由分组方法"></a>路由分组方法</h2><h3 id="虚电路网络（面向连接服务）"><a href="#虚电路网络（面向连接服务）" class="headerlink" title="虚电路网络（面向连接服务）"></a>虚电路网络（面向连接服务）</h3><p>转发决策取决于分组的标签，让网络来负责可靠交付。<br>虚电路网络要求两个计算机进行通信时，应当先建立连接，也就是虚电路。然后双方就通过该虚电路发送分组。这样的分组无需头部节省开销，信号传输十分可靠。通信结束后，释放虚电路，但网络造价相对更加昂贵。该类型适合电话这种无智能、没有处理差错能力的设备。</p>
 <h3 id="数据包网络（无连接）"><a href="#数据包网络（无连接）" class="headerlink" title="数据包网络（无连接）"></a>数据包网络（无连接）</h3><p>分组发送不需要建立简介，每一个分组都是独立发送的，网络层不提供服务质量保证。所以分组在发送过程中会出错、丢失、重复和失序还有交付期限。为了保证通信可靠，这些差错处理交给网络边缘主机——终端来处理。这种设计思想成为端到端原则。</p>
-<h1 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h1><h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><ol>
+<h2 id="IP地址和编码方式（3种）"><a href="#IP地址和编码方式（3种）" class="headerlink" title="IP地址和编码方式（3种）"></a>IP地址和编码方式（3种）</h2><h3 id="分类编址"><a href="#分类编址" class="headerlink" title="分类编址"></a>分类编址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IP地址定义为：&#123;&lt;网络号&gt;,&lt;主机号&gt;&#125;</div></pre></td></tr></table></figure>
+<p>三种常见的单播地址：</p>
+<ul>
+<li>A类地址：网络号占1个字节，且网络号第一位是0，相应主机号占3个字节。</li>
+<li>B类地址：网络号占2个字节，且网络号前两位是10，相应主机号占2个字节。</li>
+<li>C类地址：网络号占3个字节，且网络号前三位是110，相应主机号占1个字节。</li>
+</ul>
+<h3 id="划分子网：对分类编码的改进"><a href="#划分子网：对分类编码的改进" class="headerlink" title="划分子网：对分类编码的改进"></a>划分子网：对分类编码的改进</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IP地址定义为：&#123;&lt;网络号&gt;,&lt;子网号&gt;,&lt;主机号&gt;&#125;</div></pre></td></tr></table></figure>
+<h3 id="无分类编址"><a href="#无分类编址" class="headerlink" title="无分类编址"></a>无分类编址</h3><p>由于C类地址空间太小，得不到充分利用，所以提出无分类编址。<br>IP地址分成两个部分，前部分是不定长的<strong>网络前缀</strong>,后面仍旧是主机号。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IP地址定义为：&#123;&lt;网络前缀&gt;,&lt;主机号&gt;&#125;</div></pre></td></tr></table></figure></p>
+<p>另外还需要一个<strong>地址掩码</strong>来确认该网络前缀和主机，如<strong>/20</strong>代表地址掩码有20个1。</p>
+<ul>
+<li>CIDR地址块<br>网络前缀可以表示连续的IP地址块。CIDR把网络前缀都相同的连续IP地址组成CIDR地址块</li>
+</ul>
+<h2 id="NAT（网络地址转换）"><a href="#NAT（网络地址转换）" class="headerlink" title="NAT（网络地址转换）"></a>NAT（网络地址转换）</h2><p>于inside网络和outside网络中的NAT路由器在发送数据包之前，负责把内部IP地址翻译成外部合法的IP地址</p>
+<ul>
+<li>NAT遍历问题：客户想要与服务器通信，但只有一个NAT出口转换地址  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">解决：静态NAT和UPnP和转播（Skype）</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="网络层协议和报文格式"><a href="#网络层协议和报文格式" class="headerlink" title="网络层协议和报文格式"></a>网络层协议和报文格式</h2><h3 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h3><ul>
+<li>IP协议属于数据报分组交换的数据交换方式，是一种无连接的服务。</li>
+<li>功能：在源地址和目标地址之间传送数据包，即寻址，数据包的封装，分段和重组</li>
+<li>头部格式请参考<a href="#jump">附录</a></li>
+</ul>
+<h3 id="ARP协议（地址解析协议）"><a href="#ARP协议（地址解析协议）" class="headerlink" title="ARP协议（地址解析协议）"></a>ARP协议（地址解析协议）</h3><p>ARP协议是将IP地址解析为以太网MAC地址的协议。主机A向B发送数据时，由于数据报文最终要封装成帧在物理网络中传输，因此除了IP地址外还需要知道B的MAC地址。</p>
+<ul>
+<li>应用的四种典型情况<ul>
+<li>发送方是主机，要把IP数据报发送到本网络上的另一个主机。这时用ARP 找到目的主机的硬件地址。 </li>
+<li>发送方是主机，要把IP 数据报发送到另一个网络上的一个主机。这时用ARP 找到本网络上的一个路由器的硬件地址。剩下的工作由这个路由器来完成。 </li>
+<li>发送方是路由器，要把IP 数据报转发到本网络上的一个主机。这时用ARP 找到目的主机的硬件地址。 </li>
+<li>发送方是路由器，要把IP 数据报转发到另一个网络上的一个主机。这时用ARP 找到本网络上另一个路由器的硬件地址。剩下的工作由这个路由器来完成。<blockquote>
+<p>注意：ARP解决的是同一个局域网中主机（路由器）的IP地址和MAC地址的映射问题。如果不在，就要通过ARP找到一个位于当前局域网某个路由器的MAC地址，把分组发送给这个路由器，该路由器再把分组转发到下一个网络。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ICMP协议（控制报文协议）"><a href="#ICMP协议（控制报文协议）" class="headerlink" title="ICMP协议（控制报文协议）"></a>ICMP协议（控制报文协议）</h3><p>互联网控制报文协议：用于主机和路由器彼此交互网络层信息；</p>
+<ul>
+<li>用途：差错报告</li>
+</ul>
+<h3 id="DHCP（动态主机配置协议）"><a href="#DHCP（动态主机配置协议）" class="headerlink" title="DHCP（动态主机配置协议）"></a>DHCP（动态主机配置协议）</h3><p> 自动获取IP地址，还允许获得子网掩码、第一跳路由器地址和本地DNS服务器的地址</p>
+<h2 id="路由和路由算法"><a href="#路由和路由算法" class="headerlink" title="路由和路由算法"></a>路由和路由算法</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><ul>
+<li>路由：将信息从源节点传送到目标节点的行为</li>
+<li>路由的实现：路由器或三层交换机中的路由表</li>
+<li>分类：静态路由和动态理由</li>
+<li>路由表：<ul>
+<li>目的地址的网络IP地址</li>
+<li>子网掩码：判断所属网络</li>
+<li>下一跳地址/接口</li>
+</ul>
+</li>
+</ul>
+<p><em><a style="align:center" href="http://www.cnblogs.com/fingerboy/p/5396922.html" target="_blank" rel="external">资料来源</a></em></p>
+<h3 id="路由选择协议"><a href="#路由选择协议" class="headerlink" title="路由选择协议"></a>路由选择协议</h3><ul>
+<li>内部网关协议IGP：即再一个自治系统内部使用的路由选择协议：RIP、OSPF</li>
+<li>外部网关协议EGP：不在一个自治系统内部使用的路由协议：BGP</li>
+</ul>
+<h3 id="路由算法"><a href="#路由算法" class="headerlink" title="路由算法"></a>路由算法</h3><p>找到源路由器到目的路由器最好的路径（源路由接着主机）</p>
+<ul>
+<li>静态路由算法</li>
+<li>动态路由算法<ul>
+<li>距离-向量路由算法（RIP）</li>
+<li>链路状态路由算法（OSPF）</li>
+</ul>
+</li>
+</ul>
+<h4 id="RIP协议（有15跳限制）"><a href="#RIP协议（有15跳限制）" class="headerlink" title="RIP协议（有15跳限制）"></a>RIP协议（有15跳限制）</h4><p>使用的是距离-向量DV算法，度量标志是跳数</p>
+<ul>
+<li>仅和相邻路由器交换信息</li>
+<li>交换的信息是当前本路由器所指的的全部信息（路由表）</li>
+<li>按固定的时间间隔交换路由信息</li>
+</ul>
+<h3 id="OSPF协议（开放最短路径优先）"><a href="#OSPF协议（开放最短路径优先）" class="headerlink" title="OSPF协议（开放最短路径优先）"></a>OSPF协议（开放最短路径优先）</h3><ul>
+<li>向本自治系统中所有路由器发送信息（泛洪）</li>
+<li>发送的信息就是与本路由器相邻的所有路由器的链路状态</li>
+<li>只有链路状态发生变化，才使用泛洪</li>
+</ul>
+<ol>
+<li>OSPF的区域：能够用于规模很大的区域，OSPF将一个自治系统划分成若干个区域（每个区域不超过200个路由器）。</li>
+<li>OSPF不使用UDP，直接用IP数据包传送</li>
+</ol>
+<h2 id="单播、多播（组播）和广播的区别】"><a href="#单播、多播（组播）和广播的区别】" class="headerlink" title="单播、多播（组播）和广播的区别】"></a>单播、多播（组播）和广播的区别】</h2><table><tr><td></td><td>单播</td><td>多播（组播）</td><td>广播</td></tr><tr><td>概念</td><td>主机之间一对一的通讯模式，网络中的交换机和路由器对数据只进行转发不进行复制。网络中的路由器和交换机根据其目标地址选择传输路径，将IP单播数据传送到其指定的目的地。</td><td>主机之间一对一组的通讯模式，也就是加入了同一个组的主机可以接受到此组内的所有数据，网络中的交换机和路由器只向有需求者复制并转发其所需数据。主机可以向路由器请求加入或退出某个组，网络中的路由器和交换机有选择的复制并传输数据，即只将组内数据传输给那些加入组的主机。这样既能一次将数据传输给多个有需要（加入组）的主机，又能保证不影响其他不需要（未加入组）的主机的其他通讯。</td><td>主机之间一对所有的通讯模式，网络对其中每一台主机发出的信号都进行无条件复制并转发，所有主机都可以接收到所有信息（不管你是否需要），由于其不用路径选择，所以其网络成本可以很低廉。</td></tr><tr><td>优点</td><td>服务器及时响应客户端的请求；服务器针对每个客户不同的请求发送不同的数据，实现个性化服务</td><td>1. 需要相同数据流的客户端加入相同的组共享一条数据流，节省了服务器的负载。具备广播所具备的优点。<br><br>2. 由于组播协议是根据接受者的需要对数据流进行复制转发，所以服务端的服务总带宽不受客户接入端带宽的限制。IP协议允许有2亿6千多万个组播，所以其提供的服务可以非常丰富<br><br>3.此协议和单播协议一样允许在Internet宽带网上传输。</td><td>网络设备简单，维护简单，布网成本低廉；由于服务器不用向每个客户机单独发送数据，所以服务器流量负载极低。</td></tr><tr><td>缺点</td><td>1. 服务器针对每个客户机发送数据流，服务器流量＝客户机数量×客户机流量。<br><br>2. 在客户数量大、每个客户机流量大的流媒体应用中服务器不堪重负。<br><br>3. 现有的网络带宽是金字塔结构，城际省际主干带宽仅仅相当于其所有用户带宽之和的5％。如果全部使用单播协议，将造成网络主干不堪重负。现在的P2P应用就已经使主干经常阻塞。而将主干扩展20倍几乎是不可能。</td><td>1. 与单播协议相比没有纠错机制，发生丢包错包后难以弥补，但可以通过一定的容错机制和QOS加以弥补。<br><br>2. 现行网络虽然都支持组播的传输，但在客户认证、QOS等方面还需要完善，这些缺点在理论上都有成熟的解决方案，只是需要逐步推广应用到现存网络当中。</td><td>1. 无法针对每个客户的要求和时间及时提供个性化服务。<br><br>2. 网络允许服务器提供数据的带宽有限，客户端的最大带宽＝服务总带宽。例如有线电视的客户端的线路支持100个频道（如果采用数字压缩技术，理论上可以提供500个频道），即使服务商有更大的财力配置更多的发送设备、改成光纤主干，也无法超过此极限。也就是说无法向众多客户提供更多样化、更加个性化的服务。<br><br>3. 广播禁止允许在Internet宽带网上传输。</td></tr><tr><td>应用</td><td>网页浏览</td><td>视频会议</td><td>有线电视网</td></tr></table>
+
+<blockquote>
+<p><strong>多播的路由问题： 怎么样到达想要到达的多个主机？</strong><br>将主机和路由器连接处树状，在树状节点上进行传输，如果某个枝干连接出来的所有主机和路由都没有想要的（协议判断），就不往这个枝干 进行转发。</p>
+</blockquote>
+<p><a style="align:center" href="http://www.cnblogs.com/rogerroddick/archive/2009/08/31/1557228.html" target="_blank" rel="external">参考资料</a></p>
+<h1 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h1><p>数据链路层在物理层提供的服务的基础上向网络层提供服务，最基本的服务是将源自网络层的数据<strong>可靠地传输</strong>到相邻节点的目的网络层。</p>
+<h2 id="CSMA-CD协议（载波侦听多路访问）"><a href="#CSMA-CD协议（载波侦听多路访问）" class="headerlink" title="CSMA/CD协议（载波侦听多路访问）"></a>CSMA/CD协议（载波侦听多路访问）</h2><p>要求每一个站点在发送前首先监听介质<br>CSNA：先听先发<br>CD：边听边发<br>CSMA/CD算法：<br>①NIC网卡从网络层收到数据包，创建一个数据帧<br>②网卡先监听信道是不是在忙状态，如果是空闲开始发送数据包，忙的话则等，直至空闲<br>③网卡等待空闲，发送过程没有检测到碰撞，则发完<br>④监测到有碰撞，停止发送数据，发送一个拥塞信号<br>⑤停止之后，网卡进入二进制后退算法（如果第一次碰撞就不等，或等一个单元时间，第二次在0,1,2,3等，第三次选择2的m次方-1里选一个时间等待（一个单位代表发送一个512位的时间））</p>
+<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><ol>
 <li>两种传输方式<ul>
 <li>模拟信号传输</li>
 <li>数字信号传输</li>
@@ -538,7 +629,7 @@
 </li>
 <li>介质<br> 双绞线、同轴电缆、光钎等</li>
 </ol>
-
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="TCP-IP数据包格式详解"><a href="#TCP-IP数据包格式详解" class="headerlink" title="TCP/IP数据包格式详解"></a><span id="jump"><a href="http://www.xuebuyuan.com/2038843.html" target="_blank" rel="external">TCP/IP数据包格式详解</a></span></h2>
       
     </div>
 
@@ -735,7 +826,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Internet概览"><span class="nav-number">1.</span> <span class="nav-text">Internet概览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网结构"><span class="nav-number">1.1.</span> <span class="nav-text">互联网结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网中的协议"><span class="nav-number">1.2.</span> <span class="nav-text">互联网中的协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网参考模型"><span class="nav-number">1.3.</span> <span class="nav-text">互联网参考模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用层"><span class="nav-number">2.</span> <span class="nav-text">应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用层通信模式"><span class="nav-number">2.1.</span> <span class="nav-text">应用层通信模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用通信的方式——Socket（套接字）"><span class="nav-number">2.2.</span> <span class="nav-text">应用通信的方式——Socket（套接字）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用层协议"><span class="nav-number">2.3.</span> <span class="nav-text">应用层协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP协议：超文本传输协议"><span class="nav-number">2.3.1.</span> <span class="nav-text">HTTP协议：超文本传输协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS（域名解析协议）"><span class="nav-number">2.3.2.</span> <span class="nav-text">DNS（域名解析协议）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FTP-文件传输协议"><span class="nav-number">2.3.3.</span> <span class="nav-text">FTP(文件传输协议)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Telnet（远程登陆协议）"><span class="nav-number">2.3.4.</span> <span class="nav-text">Telnet（远程登陆协议）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SMTP-简单邮件传输协议"><span class="nav-number">2.3.5.</span> <span class="nav-text">SMTP(简单邮件传输协议)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输层"><span class="nav-number">3.</span> <span class="nav-text">传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层和网络层的区别"><span class="nav-number">3.1.</span> <span class="nav-text">传输层和网络层的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP协议（不可靠的无连接传输协议）"><span class="nav-number">3.2.</span> <span class="nav-text">UDP协议（不可靠的无连接传输协议）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP协议（可靠的面向连接协议）"><span class="nav-number">3.3.</span> <span class="nav-text">TCP协议（可靠的面向连接协议）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络层"><span class="nav-number">4.</span> <span class="nav-text">网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路由分组方法"><span class="nav-number">4.1.</span> <span class="nav-text">路由分组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚电路网络（面向连接服务）"><span class="nav-number">4.1.1.</span> <span class="nav-text">虚电路网络（面向连接服务）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据包网络（无连接）"><span class="nav-number">4.1.2.</span> <span class="nav-text">数据包网络（无连接）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据链路层"><span class="nav-number">5.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#物理层"><span class="nav-number">6.</span> <span class="nav-text">物理层</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Internet概览"><span class="nav-number">1.</span> <span class="nav-text">Internet概览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网结构"><span class="nav-number">1.1.</span> <span class="nav-text">互联网结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网中的协议"><span class="nav-number">1.2.</span> <span class="nav-text">互联网中的协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网参考模型"><span class="nav-number">1.3.</span> <span class="nav-text">互联网参考模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用层"><span class="nav-number">2.</span> <span class="nav-text">应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用层通信模式"><span class="nav-number">2.1.</span> <span class="nav-text">应用层通信模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用通信的方式——Socket（套接字）"><span class="nav-number">2.2.</span> <span class="nav-text">应用通信的方式——Socket（套接字）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用层协议"><span class="nav-number">2.3.</span> <span class="nav-text">应用层协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP协议：超文本传输协议"><span class="nav-number">2.3.1.</span> <span class="nav-text">HTTP协议：超文本传输协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS（域名解析协议）"><span class="nav-number">2.3.2.</span> <span class="nav-text">DNS（域名解析协议）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FTP-文件传输协议"><span class="nav-number">2.3.3.</span> <span class="nav-text">FTP(文件传输协议)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Telnet（远程登陆协议）"><span class="nav-number">2.3.4.</span> <span class="nav-text">Telnet（远程登陆协议）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SMTP-简单邮件传输协议"><span class="nav-number">2.3.5.</span> <span class="nav-text">SMTP(简单邮件传输协议)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输层"><span class="nav-number">3.</span> <span class="nav-text">传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层和网络层的区别"><span class="nav-number">3.1.</span> <span class="nav-text">传输层和网络层的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP协议（不可靠的无连接传输协议）"><span class="nav-number">3.2.</span> <span class="nav-text">UDP协议（不可靠的无连接传输协议）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP协议（可靠的面向连接协议）"><span class="nav-number">3.3.</span> <span class="nav-text">TCP协议（可靠的面向连接协议）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络层"><span class="nav-number">4.</span> <span class="nav-text">网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路由分组方法"><span class="nav-number">4.1.</span> <span class="nav-text">路由分组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚电路网络（面向连接服务）"><span class="nav-number">4.1.1.</span> <span class="nav-text">虚电路网络（面向连接服务）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据包网络（无连接）"><span class="nav-number">4.1.2.</span> <span class="nav-text">数据包网络（无连接）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP地址和编码方式（3种）"><span class="nav-number">4.2.</span> <span class="nav-text">IP地址和编码方式（3种）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类编址"><span class="nav-number">4.2.1.</span> <span class="nav-text">分类编址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#划分子网：对分类编码的改进"><span class="nav-number">4.2.2.</span> <span class="nav-text">划分子网：对分类编码的改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无分类编址"><span class="nav-number">4.2.3.</span> <span class="nav-text">无分类编址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT（网络地址转换）"><span class="nav-number">4.3.</span> <span class="nav-text">NAT（网络地址转换）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络层协议和报文格式"><span class="nav-number">4.4.</span> <span class="nav-text">网络层协议和报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP协议"><span class="nav-number">4.4.1.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP协议（地址解析协议）"><span class="nav-number">4.4.2.</span> <span class="nav-text">ARP协议（地址解析协议）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ICMP协议（控制报文协议）"><span class="nav-number">4.4.3.</span> <span class="nav-text">ICMP协议（控制报文协议）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP（动态主机配置协议）"><span class="nav-number">4.4.4.</span> <span class="nav-text">DHCP（动态主机配置协议）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由和路由算法"><span class="nav-number">4.5.</span> <span class="nav-text">路由和路由算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础概念"><span class="nav-number">4.5.1.</span> <span class="nav-text">基础概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由选择协议"><span class="nav-number">4.5.2.</span> <span class="nav-text">路由选择协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由算法"><span class="nav-number">4.5.3.</span> <span class="nav-text">路由算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RIP协议（有15跳限制）"><span class="nav-number">4.5.3.1.</span> <span class="nav-text">RIP协议（有15跳限制）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSPF协议（开放最短路径优先）"><span class="nav-number">4.5.4.</span> <span class="nav-text">OSPF协议（开放最短路径优先）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单播、多播（组播）和广播的区别】"><span class="nav-number">4.6.</span> <span class="nav-text">单播、多播（组播）和广播的区别】</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据链路层"><span class="nav-number">5.</span> <span class="nav-text">数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSMA-CD协议（载波侦听多路访问）"><span class="nav-number">5.1.</span> <span class="nav-text">CSMA/CD协议（载波侦听多路访问）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#物理层"><span class="nav-number">6.</span> <span class="nav-text">物理层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">7.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP数据包格式详解"><span class="nav-number">7.1.</span> <span class="nav-text">TCP/IP数据包格式详解</span></a></li></ol></li></ol></div>
             
 
           </div>
