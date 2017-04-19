@@ -71,7 +71,7 @@
 <link href="/jonty_blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Jonty, Web" />
+  <meta name="keywords" content="前端," />
 
 
 
@@ -87,15 +87,19 @@
 
 
 
-<meta name="description" content="在校大学僧">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JontyBlog">
-<meta property="og:url" content="https://jontylu.github.io/jonty_blog/archives/index.html">
+<meta name="description" content="这次的问题就是怎么加快页面访问的速度呢？
+之后会慢慢地补充~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端性能优化">
+<meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/04/19/前端性能优化/index.html">
 <meta property="og:site_name" content="JontyBlog">
-<meta property="og:description" content="在校大学僧">
+<meta property="og:description" content="这次的问题就是怎么加快页面访问的速度呢？
+之后会慢慢地补充~">
+<meta property="og:updated_time" content="2017-04-19T04:40:45.937Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JontyBlog">
-<meta name="twitter:description" content="在校大学僧">
+<meta name="twitter:title" content="前端性能优化">
+<meta name="twitter:description" content="这次的问题就是怎么加快页面访问的速度呢？
+之后会慢慢地补充~">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://jontylu.github.io/jonty_blog/archives/"/>
+  <link rel="canonical" href="https://jontylu.github.io/jonty_blog/2017/04/19/前端性能优化/"/>
 
 
 
 
 
-  <title> 归档 | JontyBlog </title>
+  <title> 前端性能优化 | JontyBlog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,7 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,403 +262,217 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 12 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/04/19/前端性能优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jonty">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/jonty_blog/images/portrait.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JontyBlog">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端性能优化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T12:16:57+08:00">
+                2017-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/jonty_blog/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p>这次的问题就是<strong>怎么加快页面访问的速度呢？</strong></p>
+<p>之后会慢慢地补充~</p>
+<a id="more"></a>
+<h2 id="减少请求次数"><a href="#减少请求次数" class="headerlink" title="减少请求次数"></a>减少请求次数</h2><ol>
+<li><p>CSS Sprites(图片精灵)</p>
+<p>将多张图片组合成一个图片，请求次数就从[多]变成[1]了。</p>
+<p>前端用background-position:x y;来切割图片就好了</p>
+</li>
+<li><p>合并脚本，合并样式表</p>
+</li>
+</ol>
+<h2 id="压缩内容"><a href="#压缩内容" class="headerlink" title="压缩内容"></a>压缩内容</h2><ul>
+<li>文本压缩，如js、html、css</li>
+</ul>
+<h2 id="样式和脚本放置的位置"><a href="#样式和脚本放置的位置" class="headerlink" title="样式和脚本放置的位置"></a>样式和脚本放置的位置</h2><ul>
+<li><p>CSS</p>
+<p>放在前面浏览器可以一般渲染html一边发送其他文件的请求</p>
+</li>
+<li><p>脚本</p>
+<p>不阻止内容体现，视觉上加快了</p>
+</li>
+</ul>
+<h2 id="使用CDN（内容分发网络）"><a href="#使用CDN（内容分发网络）" class="headerlink" title="使用CDN（内容分发网络）"></a>使用CDN（内容分发网络）</h2><ul>
+<li><p>什么是CDN</p>
+<p>一组分布在多个不同地理位置的Web服务器，用户可以就近去的所需内容，可看做一种缓存代理</p>
+</li>
+<li><p>能干嘛</p>
+<p>用户可以就近获得静态资源，假如你需要要jQuery框架，使用大公司提供的CDN服务会更快一点</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="DNS预解析（仅chrome和Firefox3-5支持）"><a href="#DNS预解析（仅chrome和Firefox3-5支持）" class="headerlink" title="DNS预解析（仅chrome和Firefox3.5支持）"></a>DNS预解析（仅chrome和Firefox3.5支持）</h2><p>​    DNS的解析也是拖慢时间的问题，对本地和浏览器的DNS缓存进行优化</p>
+<ul>
+<li><p>DNS预解析：在header加入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"dns-prefetch"</span> <span class="attr">href</span>=<span class="string">"其他链接"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--访问其他外链的时候可以减少DNS解析 --&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="添加Cache-Control头"><a href="#添加Cache-Control头" class="headerlink" title="添加Cache-Control头"></a>添加Cache-Control头</h2><ul>
+<li>控制缓存失效的日期</li>
+</ul>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/jonty_blog/tags/前端/" rel="tag"># 前端</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/jonty_blog/2017/04/19/输入url到页面返回经历了什么/" rel="next" title="输入url到页面返回经历了什么?">
+                <i class="fa fa-chevron-left"></i> 输入url到页面返回经历了什么?
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/前端性能优化/" itemprop="url">
-              
-                <span itemprop="name">前端性能优化</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T12:16:57+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/输入url到页面返回经历了什么/" itemprop="url">
-              
-                <span itemprop="name">输入url到页面返回经历了什么?</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T10:49:58+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/jQuey-Note/" itemprop="url">
-              
-                <span itemprop="name">jQuery_Note</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T10:38:17+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/SYSU-PPT-数字图像处理课程展示/" itemprop="url">
-              
-                <span itemprop="name">SYSU_PPT_数字图像处理课程展示 </span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T10:20:57+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/SYSU-PPT-通信原理课程展示/" itemprop="url">
-              
-                <span itemprop="name">SYSU_PPT_通信原理课程展示</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T10:07:35+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/SYSU-PPT-软创比赛/" itemprop="url">
-              
-                <span itemprop="name">SYSU_PPT_软创比赛</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T09:53:44+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/SYSU-Video02-沸点全员大会/" itemprop="url">
-              
-                <span itemprop="name">SYSU_Video02_沸点全员大会 </span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T09:47:21+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/19/SYSU-video01/" itemprop="url">
-              
-                <span itemprop="name">SYSU_Video01_元宵喜乐会</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T09:28:23+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/06/HTML5新增标签/" itemprop="url">
-              
-                <span itemprop="name">HTML5新增标签</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-06T13:09:09+08:00"
-              content="2017-04-06" >
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/jonty_blog/2017/04/06/closure/" itemprop="url">
-              
-                <span itemprop="name">匿名函数和闭包</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-06T10:40:17+08:00"
-              content="2017-04-06" >
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/jonty_blog/archives/page/2/">2</a><a class="extend next" rel="next" href="/jonty_blog/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -662,6 +480,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -681,8 +503,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/jonty_blog/images/portrait.jpg"
@@ -778,6 +609,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#减少请求次数"><span class="nav-number">1.</span> <span class="nav-text">减少请求次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩内容"><span class="nav-number">2.</span> <span class="nav-text">压缩内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式和脚本放置的位置"><span class="nav-number">3.</span> <span class="nav-text">样式和脚本放置的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用CDN（内容分发网络）"><span class="nav-number">4.</span> <span class="nav-text">使用CDN（内容分发网络）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS预解析（仅chrome和Firefox3-5支持）"><span class="nav-number">5.</span> <span class="nav-text">DNS预解析（仅chrome和Firefox3.5支持）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加Cache-Control头"><span class="nav-number">6.</span> <span class="nav-text">添加Cache-Control头</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -883,11 +730,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/jonty_blog/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/jonty_blog/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
