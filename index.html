@@ -270,6 +270,167 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/04/19/关于跨域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jonty">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/jonty_blog/images/portrait.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JontyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/jonty_blog/2017/04/19/关于跨域/" itemprop="url">
+                  关于跨域
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T12:45:33+08:00">
+                2017-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/jonty_blog/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="？跨域"><a href="#？跨域" class="headerlink" title="？跨域"></a>？跨域</h2><p>跨域是指一个域名的网页去请求另一个域名的资源。</p>
+<p>同源策略是浏览器对JavaScript施加的安全限制。</p>
+<p>只要协议、域名、端口有不同就是跨域</p>
+<h2 id="为什么要限制跨域"><a href="#为什么要限制跨域" class="headerlink" title="为什么要限制跨域"></a>为什么要限制跨域</h2><p><srtong>安全问题[划重点]</srtong></p>
+<p>防止CSRF（跨站请求伪造）攻击</p>
+<h2 id="怎么实现跨域访问"><a href="#怎么实现跨域访问" class="headerlink" title="怎么实现跨域访问"></a>怎么实现跨域访问</h2><ol>
+<li><p>基于iframe实现(得同一个基础域，同个协议，同一个端口 )</p>
+<p>两个页面同时添加document.domain，父页面就可以调用子页面的函数</p>
+</li>
+<li><p>基于script，script标签不受同源策略的限制</p>
+</li>
+<li><p>JSONP</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  <span class="attr">url</span>:<span class="string">"http://......."</span>,</div><div class="line">  <span class="attr">type</span>:<span class="string">"GET"</span>,</div><div class="line">  <span class="attr">datetype</span>: <span class="string">"JSONP"</span>,</div><div class="line">  <span class="attr">jsonp</span>: <span class="string">"callback"</span>,<span class="comment">//传递给请求处理程序或页面，用来获取jsonp回调函数名的参数吗</span></div><div class="line">  jsonpCallback: <span class="string">"returnjs"</span>,<span class="comment">//自定义的jsonp回调函数名称</span></div><div class="line">  success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+<blockquote>
+<p>以上内容不完整~未来深入学习后会继续补充</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/04/19/前端性能优化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1597,155 +1758,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/04/06/closure/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jonty">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/jonty_blog/images/portrait.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JontyBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/jonty_blog/2017/04/06/closure/" itemprop="url">
-                  匿名函数和闭包
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-06T10:40:17+08:00">
-                2017-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/jonty_blog/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>函数</strong>：输入的数据，经过一系列的逻辑运算，返回唯一输出的代码块</p>
-<p><strong>匿名函数</strong>：没有声明函数</p>
-<p><strong>闭包</strong>：程序语言中能让代码调用已经运行函数中所定义的<strong>局部变量</strong></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jonty_blog/2017/04/06/closure/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1795,7 +1807,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/jonty_blog/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
