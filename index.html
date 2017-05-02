@@ -515,28 +515,16 @@
 
       
         
-          
-            <h2 id="？跨域"><a href="#？跨域" class="headerlink" title="？跨域"></a>？跨域</h2><p>跨域是指一个域名的网页去请求另一个域名的资源。</p>
+          <h2 id="？跨域"><a href="#？跨域" class="headerlink" title="？跨域"></a>？跨域</h2><p>跨域是指一个域名的网页去请求另一个域名的资源。</p>
 <p>同源策略是浏览器对JavaScript施加的安全限制。</p>
 <p>只要协议、域名、端口有不同就是跨域</p>
-<h2 id="为什么要限制跨域"><a href="#为什么要限制跨域" class="headerlink" title="为什么要限制跨域"></a>为什么要限制跨域</h2><p><srtong>安全问题[划重点]</srtong></p>
-<p>防止CSRF（跨站请求伪造）攻击</p>
-<h2 id="怎么实现跨域访问"><a href="#怎么实现跨域访问" class="headerlink" title="怎么实现跨域访问"></a>怎么实现跨域访问</h2><ol>
-<li><p>基于iframe实现(得同一个基础域，同个协议，同一个端口 )</p>
-<p>两个页面同时添加document.domain，父页面就可以调用子页面的函数</p>
-</li>
-<li><p>基于script，script标签不受同源策略的限制</p>
-</li>
-<li><p>JSONP</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  <span class="attr">url</span>:<span class="string">"http://......."</span>,</div><div class="line">  <span class="attr">type</span>:<span class="string">"GET"</span>,</div><div class="line">  <span class="attr">datetype</span>: <span class="string">"JSONP"</span>,</div><div class="line">  <span class="attr">jsonp</span>: <span class="string">"callback"</span>,<span class="comment">//传递给请求处理程序或页面，用来获取jsonp回调函数名的参数吗</span></div><div class="line">  jsonpCallback: <span class="string">"returnjs"</span>,<span class="comment">//自定义的jsonp回调函数名称</span></div><div class="line">  success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
-<blockquote>
-<p>以上内容不完整~未来深入学习后会继续补充</p>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/jonty_blog/2017/04/19/关于跨域/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
