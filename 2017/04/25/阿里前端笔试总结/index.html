@@ -71,7 +71,7 @@
 <link href="/jonty_blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,阿里," />
+  <meta name="keywords" content="阿里,前端," />
 
 
 
@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/04/25/阿里前端笔试总结/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="参加了阿里的前端笔试题，深知自己的能力，还是记录一下吧~可以为以后的校招做准备~">
-<meta property="og:updated_time" content="2017-04-28T04:05:31.332Z">
+<meta property="og:updated_time" content="2017-05-02T03:49:37.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里前端笔试总结">
 <meta name="twitter:description" content="参加了阿里的前端笔试题，深知自己的能力，还是记录一下吧~可以为以后的校招做准备~">
@@ -365,10 +365,39 @@
       
         <p>参加了阿里的前端笔试题，深知自己的能力，还是记录一下吧~可以为以后的校招做准备~</p>
 <a id="more"></a>
-<h2 id="第一题-垂直居中"><a href="#第一题-垂直居中" class="headerlink" title="第一题 垂直居中"></a>第一题 垂直居中</h2><h2 id="第二题-Node-js进程，"><a href="#第二题-Node-js进程，" class="headerlink" title="第二题 Node.js进程，"></a>第二题 Node.js进程，</h2><p>虽然是有用node写过后台，理论知识还是不巩固=.=。Node.js是单线程的，但它是使用事件驱动来处理并发的。虽然也是排队，但只有事件发生的时候才使用对应的回调函数。</p>
+<h2 id="第一题-垂直居中"><a href="#第一题-垂直居中" class="headerlink" title="第一题 垂直居中"></a>第一题 垂直居中</h2><p>第一题上来就考了垂直居中，算是老生常谈的问题</p>
+<ul>
+<li><p>水平居中</p>
+<p>|  序号  | 子元素  |     子元素属性     | 父元素  |                  父元素属性                   |<br>| :–: | :–: | :———–: | :–: | :————————————–: |<br>|  1   | 行内元素 |       /       |  /   |            text-align:center             |<br>|  2   | 块级元素 | margin:0 auto |  /   |                    /                     |<br>|  3   |  /   |  float:left;  |  /   | display:flex                                            justify-content:center; |<br>|  4   |  /   |       /       |  /   | display:flex                                            justify-content:center; |</p>
+</li>
+<li><p>垂直居中</p>
+<ol>
+<li><p>已知高度宽度</p>
+<ul>
+<li><p>绝对定位和负边距(子绝父相)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.son</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">top</span>:<span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>:<span class="number">50px</span>;</div><div class="line">  <span class="attribute">margin-top</span>:-<span class="number">50px</span>;</div><div class="line">  <span class="attribute">margin-left</span>:-<span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位和margin</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.son</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">margin</span>: auto;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">  <span class="comment">/*left: 0;</span></div><div class="line">  right: 0; 加上这两个可实现水平居中*/</div><div class="line">  <span class="attribute">width</span>: <span class="number">20px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</div><div class="line">            </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>未知高度宽度:实现垂直水平居中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">           <span class="attribute">width</span>: <span class="number">10rem</span>;</div><div class="line">           <span class="attribute">height</span>: <span class="number">10rem</span>;</div><div class="line">           <span class="attribute">background-color</span>: red;</div><div class="line">           <span class="attribute">position</span>: relative;</div><div class="line"></div><div class="line"></div><div class="line">       &#125;</div><div class="line">       <span class="selector-class">.son</span>&#123;</div><div class="line">           <span class="attribute">width</span>: <span class="number">50%</span>;</div><div class="line">           <span class="attribute">height</span>: <span class="number">50%</span>;</div><div class="line">           <span class="attribute">background-color</span>: blue;</div><div class="line">         </div><div class="line">           <span class="attribute">position</span>: absolute;</div><div class="line">           <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">           <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">           <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);<span class="comment">/*here*/</span></div><div class="line"></div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>flex布局：实现垂直水平居中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">            <span class="attribute">width</span>: <span class="number">10rem</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">10rem</span>;</div><div class="line">            <span class="attribute">background-color</span>: red;</div><div class="line">            <span class="comment">/*below*/</span></div><div class="line">            <span class="attribute">display</span>:flex;</div><div class="line">            <span class="attribute">justify-content</span>:center;</div><div class="line">            <span class="attribute">align-items</span>: center;</div><div class="line"></div><div class="line"></div><div class="line">        &#125;</div><div class="line">        <span class="selector-class">.son</span>&#123;</div><div class="line">            <span class="attribute">width</span>: <span class="number">50%</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">50%</span>;</div><div class="line">            <span class="attribute">background-color</span>: blue;</div><div class="line"></div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="第二题-Node-js进程，"><a href="#第二题-Node-js进程，" class="headerlink" title="第二题 Node.js进程，"></a>第二题 Node.js进程，</h2><p>虽然是有用node写过后台，理论知识还是不巩固=.=。Node.js是单线程的，但它是使用事件驱动来处理并发的。虽然也是排队，但只有事件发生的时候才使用对应的回调函数。</p>
 <ol>
 <li><p>子线程的创建：使用 child_process 模块</p>
 <p> child_process 提供了四个方法</p>
+</li>
+</ol>
 <ul>
 <li><p>child_process.exec</p>
 <p>创建子进程，可以接受一个回调函数作为参数并可以返回回调函数的结果</p>
@@ -376,19 +405,17 @@
 <p>第一个参数是shell命令，exec方法中可以用bash来解释命令，若输入了恶意代码，会带来风险</p>
 </li>
 <li><p>execFile</p>
-<p>跟exec函数类似，可以直接执行所指定的文件，但第一个参数不被命令执行，安全性高</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child_process = <span class="built_in">require</span>(<span class="string">"child_process"</span>);</div><div class="line">child_process.execFile(file,callback);</div></pre></td></tr></table></figure>
+<p>   跟exec函数类似，可以直接执行所指定的文件，但第一个参数不被命令执行，安全性高</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child_process = <span class="built_in">require</span>(<span class="string">"child_process"</span>);</div><div class="line">child_process.execFile(file,callback);</div></pre></td></tr></table></figure>
 </li>
 <li><p>child_process.spawn</p>
-<p>跟exec方法类似，只是少了回调函数，只能运行指定函数;适合子进程长时间运行的情况，如数据量较大的时候</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child_process = <span class="built_in">require</span>(<span class="string">"child_process"</span>);</div><div class="line"><span class="keyword">var</span> child = child_process.spawn(command);</div><div class="line">child.stdout.on(<span class="string">"data"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;<span class="built_in">console</span>.log(data);&#125;);<span class="comment">//调用指定的函数</span></div></pre></td></tr></table></figure>
+<p>   跟exec方法类似，只是少了回调函数，只能运行指定函数;适合子进程长时间运行的情况，如数据量较大的时候</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child_process = <span class="built_in">require</span>(<span class="string">"child_process"</span>);</div><div class="line"><span class="keyword">var</span> child = child_process.spawn(command);</div><div class="line">child.stdout.on(<span class="string">"data"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;<span class="built_in">console</span>.log(data);&#125;);<span class="comment">//调用指定的函数</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>child_process.fork</p>
-<p>是spawn的特殊方法，可以通过指定模块路径而直接运行node.js的模块，会在父进程和子进程之间建立一个通信管道，用于进程间的通信。对象监听message事件可以获取子进程返回的信息或者通过send()发送信息。可以使用disconnect来关闭通信。</p>
+<p>   是spawn的特殊方法，可以通过指定模块路径而直接运行node.js的模块，会在父进程和子进程之间建立一个通信管道，用于进程间的通信。对象监听message事件可以获取子进程返回的信息或者通过send()发送信息。可以使用disconnect来关闭通信。</p>
 </li>
 </ul>
-</li>
-</ol>
 <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>说完简单的子线程创建，再来看看题目</p>
 <p><strong>下面关于Node.js子线程说法正确的是</strong></p>
 <p>A. 子线程可以通过spawn,exec等方法来创建</p>
@@ -430,9 +457,9 @@
       
         <div class="post-tags">
           
-            <a href="/jonty_blog/tags/前端/" rel="tag"># 前端</a>
-          
             <a href="/jonty_blog/tags/阿里/" rel="tag"># 阿里</a>
+          
+            <a href="/jonty_blog/tags/前端/" rel="tag"># 前端</a>
           
         </div>
       
