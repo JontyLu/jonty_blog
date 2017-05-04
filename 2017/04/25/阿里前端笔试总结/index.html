@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/04/25/阿里前端笔试总结/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="参加了阿里的前端笔试题，深知自己的能力，还是记录一下吧~可以为以后的校招做准备~">
-<meta property="og:updated_time" content="2017-05-03T17:33:39.411Z">
+<meta property="og:updated_time" content="2017-05-04T03:38:31.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里前端笔试总结">
 <meta name="twitter:description" content="参加了阿里的前端笔试题，深知自己的能力，还是记录一下吧~可以为以后的校招做准备~">
@@ -439,10 +439,10 @@
 <li><p>XSS 跨站脚本攻击</p>
 <p>攻击者在网页中植入脚本，攻击者可以在用户浏览网页时运行该脚本从而获取用户的cookie，导航恶意网站或携带木马等</p>
 <ul>
-<li><p>非持久性攻击</p>
+<li><p>非持久性攻击（反射型XSS）</p>
 <p>每次在参数提交恶意数据才能触发的攻击，一般攻击包含在URL中</p>
 </li>
-<li><p>持久性攻击（存储XSS）</p>
+<li><p>持久性攻击（存储型XSS）</p>
 <p>通过提交恶意数据到存储器中，第一次攻击把攻击代码提交到服务器就可以了。危险较高。</p>
 </li>
 </ul>
@@ -529,7 +529,22 @@
 <p>D. 动态插入的script标签会按照插入的顺序执行</p>
 <p>E. 通过load事件来确定script标签加载完成</p>
 <p>F. 通过error事件来确定script标签加载失败</p>
-<h2 id="第八题-单行文字超出，省略号显示"><a href="#第八题-单行文字超出，省略号显示" class="headerlink" title="第八题 单行文字超出，省略号显示"></a>第八题 单行文字超出，省略号显示</h2>
+<h2 id="第八题-单行文字超出，省略号显示"><a href="#第八题-单行文字超出，省略号显示" class="headerlink" title="第八题 单行文字超出，省略号显示"></a>第八题 单行文字超出，省略号显示</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</div><div class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>;</div><div class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</div></pre></td></tr></table></figure>
+<h2 id="第九题-XSS（参考第四题）"><a href="#第九题-XSS（参考第四题）" class="headerlink" title="第九题 XSS（参考第四题）"></a>第九题 XSS（参考第四题）</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>下面说法正确的是（）</p>
+<p>A. XSS漏洞可以获取用户的cookie<br>B. 反射型XSS漏洞的攻击代码，一般会存储在服务器<br>C. 客户端请求增加TOKEN，可以有效防范XSS漏洞攻击<br>D. XSS攻击是跨站请求伪造攻击<br>E. 对输出字符进行字符转义可以防范XSS漏洞攻击</p>
+<h2 id="第十题-CSS和Less"><a href="#第十题-CSS和Less" class="headerlink" title="第十题 CSS和Less"></a>第十题 CSS和Less</h2><p>A. @import语句是Less新增的功能，用以引入其他Less和CSS文件</p>
+<p>B. CSS选择器命名可以包含-，如foo-bar()；Less变量命名可以包含-，如@foo-bar</p>
+<p>C. CSS伪类选择器的表示方法是使用两个冒号，如foo:bar</p>
+<p>D. Less提供属性值的四则运算，而CSS3之前都没有这种功能</p>
+<blockquote>
+<p>calc()???喵喵喵</p>
+</blockquote>
+<p>E. 和SASS，PortCSS等一样，Less是CSS的预处理语言</p>
+<h2 id="第十一题-多层json对象转成扁平结构"><a href="#第十一题-多层json对象转成扁平结构" class="headerlink" title="第十一题 多层json对象转成扁平结构"></a>第十一题 多层json对象转成扁平结构</h2><h2 id="第十二题-实现移动端网页列表下拉加载新条目的功能"><a href="#第十二题-实现移动端网页列表下拉加载新条目的功能" class="headerlink" title="第十二题 实现移动端网页列表下拉加载新条目的功能"></a>第十二题 实现移动端网页列表下拉加载新条目的功能</h2><h2 id="第十三题-单页应用中的前端路由"><a href="#第十三题-单页应用中的前端路由" class="headerlink" title="第十三题 单页应用中的前端路由"></a>第十三题 单页应用中的前端路由</h2><h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a>题目</h3><ol>
+<li>分析项目中使用前端路由的不足</li>
+<li>原生JS实现一种前端路由方案，可以使用伪代码</li>
+</ol>
+
       
     </div>
 
@@ -744,7 +759,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一题-垂直居中"><span class="nav-number">1.</span> <span class="nav-text">第一题 垂直居中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三题-blur事件更改兄弟元素的样式"><span class="nav-number">2.</span> <span class="nav-text">第三题 blur事件更改兄弟元素的样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四题-前端安全攻防"><span class="nav-number">3.</span> <span class="nav-text">第四题 前端安全攻防</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1"><span class="nav-number">3.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五题-Progressive-Web-APP（PWA）"><span class="nav-number">4.</span> <span class="nav-text">第五题 Progressive Web APP（PWA）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2"><span class="nav-number">4.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六题-忘了哈哈哈哈"><span class="nav-number">5.</span> <span class="nav-text">第六题 忘了哈哈哈哈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七题-script标签"><span class="nav-number">6.</span> <span class="nav-text">第七题 script标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八题-单行文字超出，省略号显示"><span class="nav-number">7.</span> <span class="nav-text">第八题 单行文字超出，省略号显示</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一题-垂直居中"><span class="nav-number">1.</span> <span class="nav-text">第一题 垂直居中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三题-blur事件更改兄弟元素的样式"><span class="nav-number">2.</span> <span class="nav-text">第三题 blur事件更改兄弟元素的样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四题-前端安全攻防"><span class="nav-number">3.</span> <span class="nav-text">第四题 前端安全攻防</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1"><span class="nav-number">3.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五题-Progressive-Web-APP（PWA）"><span class="nav-number">4.</span> <span class="nav-text">第五题 Progressive Web APP（PWA）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2"><span class="nav-number">4.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六题-忘了哈哈哈哈"><span class="nav-number">5.</span> <span class="nav-text">第六题 忘了哈哈哈哈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七题-script标签"><span class="nav-number">6.</span> <span class="nav-text">第七题 script标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八题-单行文字超出，省略号显示"><span class="nav-number">7.</span> <span class="nav-text">第八题 单行文字超出，省略号显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九题-XSS（参考第四题）"><span class="nav-number">8.</span> <span class="nav-text">第九题 XSS（参考第四题）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-3"><span class="nav-number">8.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十题-CSS和Less"><span class="nav-number">9.</span> <span class="nav-text">第十题 CSS和Less</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十一题-多层json对象转成扁平结构"><span class="nav-number">10.</span> <span class="nav-text">第十一题 多层json对象转成扁平结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十二题-实现移动端网页列表下拉加载新条目的功能"><span class="nav-number">11.</span> <span class="nav-text">第十二题 实现移动端网页列表下拉加载新条目的功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十三题-单页应用中的前端路由"><span class="nav-number">12.</span> <span class="nav-text">第十三题 单页应用中的前端路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-4"><span class="nav-number">12.1.</span> <span class="nav-text">题目</span></a></li></ol></li></ol></div>
             
 
           </div>
