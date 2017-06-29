@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="总结了一些关于浏览器的知识点">
-<meta property="og:updated_time" content="2017-06-29T05:45:09.851Z">
+<meta property="og:updated_time" content="2017-06-29T08:13:03.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试知识点——Web浏览器">
 <meta name="twitter:description" content="总结了一些关于浏览器的知识点">
@@ -415,13 +415,13 @@
 </li>
 <li>cookies：大小首先，请求新页面时cookies会被发送过去，浪费带宽</li>
 </ol>
-<h4 id="浏览器CSS兼容性问题"><a href="#浏览器CSS兼容性问题" class="headerlink" title="浏览器CSS兼容性问题"></a>浏览器CSS兼容性问题</h4><ol>
+<h4 id="五、浏览器CSS兼容性问题"><a href="#五、浏览器CSS兼容性问题" class="headerlink" title="五、浏览器CSS兼容性问题"></a>五、浏览器CSS兼容性问题</h4><ol>
 <li><p>不同浏览器的margin和padding差异较大</p>
 <p>解决方法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">  <span class="attribute">padding</span>:<span class="number">0</span>;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="浏览器js兼容性问题"><a href="#浏览器js兼容性问题" class="headerlink" title="浏览器js兼容性问题"></a>浏览器js兼容性问题</h4><ol>
+<h4 id="六、浏览器js兼容性问题"><a href="#六、浏览器js兼容性问题" class="headerlink" title="六、浏览器js兼容性问题"></a>六、浏览器js兼容性问题</h4><ol>
 <li><p>document.formName.item(”itemName”) 问题：</p>
 <p>IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。 </p>
 <p>解决方法：统一使用document.formName.elements[‘elementName’];</p>
@@ -442,6 +442,7 @@
 <p>网上博客：</p>
 <p><a href="http://www.cnblogs.com/cy1121/p/5891904.html" target="_blank" rel="external">js的一些兼容性写法</a></p>
 </blockquote>
+<h4 id="七、从输入URL到页面展示"><a href="#七、从输入URL到页面展示" class="headerlink" title="七、从输入URL到页面展示"></a>七、从输入URL到页面展示</h4><p><a href="https://jontylu.github.io/jonty_blog/2017/04/19/%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E8%BF%94%E5%9B%9E%E7%BB%8F%E5%8E%86%E4%BA%86%E4%BB%80%E4%B9%88/" target="_blank">点击此处跳转</a></p>
 
       
     </div>
@@ -655,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、常用浏览器和其内核"><span class="nav-number">1.</span> <span class="nav-text">一、常用浏览器和其内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、如何实现浏览器内多个标签页之间的通信"><span class="nav-number">2.</span> <span class="nav-text">二、如何实现浏览器内多个标签页之间的通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、减少页面加载时间的方法"><span class="nav-number">3.</span> <span class="nav-text">三、减少页面加载时间的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、WebStorage和Cookies的区别"><span class="nav-number">4.</span> <span class="nav-text">四、WebStorage和Cookies的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器CSS兼容性问题"><span class="nav-number">5.</span> <span class="nav-text">浏览器CSS兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器js兼容性问题"><span class="nav-number">6.</span> <span class="nav-text">浏览器js兼容性问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、常用浏览器和其内核"><span class="nav-number">1.</span> <span class="nav-text">一、常用浏览器和其内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、如何实现浏览器内多个标签页之间的通信"><span class="nav-number">2.</span> <span class="nav-text">二、如何实现浏览器内多个标签页之间的通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、减少页面加载时间的方法"><span class="nav-number">3.</span> <span class="nav-text">三、减少页面加载时间的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、WebStorage和Cookies的区别"><span class="nav-number">4.</span> <span class="nav-text">四、WebStorage和Cookies的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、浏览器CSS兼容性问题"><span class="nav-number">5.</span> <span class="nav-text">五、浏览器CSS兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、浏览器js兼容性问题"><span class="nav-number">6.</span> <span class="nav-text">六、浏览器js兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七、从输入URL到页面展示"><span class="nav-number">7.</span> <span class="nav-text">七、从输入URL到页面展示</span></a></li></ol></div>
             
 
           </div>
