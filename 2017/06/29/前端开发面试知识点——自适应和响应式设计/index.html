@@ -71,7 +71,7 @@
 <link href="/jonty_blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="浏览器," />
+  <meta name="keywords" content="前端,响应式,自适应," />
 
 
 
@@ -87,16 +87,22 @@
 
 
 
-<meta name="description" content="总结了一些关于浏览器的知识点">
+<meta name="description" content="自适应：Adaptive design
+响应式：Responsive design
+两者都是为了解决网页在不同屏幕尺寸的设备上展示的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端开发面试知识点——Web浏览器">
-<meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/index.html">
+<meta property="og:title" content="前端开发面试知识点——自适应和响应式设计">
+<meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——自适应和响应式设计/index.html">
 <meta property="og:site_name" content="JontyBlog">
-<meta property="og:description" content="总结了一些关于浏览器的知识点">
-<meta property="og:updated_time" content="2017-06-29T08:19:05.881Z">
+<meta property="og:description" content="自适应：Adaptive design
+响应式：Responsive design
+两者都是为了解决网页在不同屏幕尺寸的设备上展示的问题">
+<meta property="og:updated_time" content="2017-06-30T09:23:38.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发面试知识点——Web浏览器">
-<meta name="twitter:description" content="总结了一些关于浏览器的知识点">
+<meta name="twitter:title" content="前端开发面试知识点——自适应和响应式设计">
+<meta name="twitter:description" content="自适应：Adaptive design
+响应式：Responsive design
+两者都是为了解决网页在不同屏幕尺寸的设备上展示的问题">
 
 
 
@@ -124,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/"/>
+  <link rel="canonical" href="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——自适应和响应式设计/"/>
 
 
 
 
 
-  <title> 前端开发面试知识点——Web浏览器 | JontyBlog </title>
+  <title> 前端开发面试知识点——自适应和响应式设计 | JontyBlog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -269,7 +275,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/">
+    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/06/29/前端开发面试知识点——自适应和响应式设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jonty">
@@ -290,7 +296,7 @@
             
             
               
-                前端开发面试知识点——Web浏览器
+                前端开发面试知识点——自适应和响应式设计
               
             
           </h1>
@@ -305,7 +311,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T12:58:00+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T17:03:06+08:00">
                 2017-06-29
               </time>
             
@@ -328,8 +334,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/jonty_blog/categories/浏览器/" itemprop="url" rel="index">
-                    <span itemprop="name">浏览器</span>
+                  <a href="/jonty_blog/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -363,86 +369,84 @@
       
 
       
-        <p>总结了一些关于浏览器的知识点</p>
+        <p><strong>自适应</strong>：Adaptive design</p>
+<p><strong>响应式</strong>：Responsive design</p>
+<p>两者都是为了解决网页在不同屏幕尺寸的设备上展示的问题</p>
 <a id="more"></a>
-<h4 id="常用浏览器和其内核"><a href="#常用浏览器和其内核" class="headerlink" title="常用浏览器和其内核"></a>常用浏览器和其内核</h4><ol>
-<li>Chrome：Trident</li>
-<li>FireFox：gecko</li>
-<li>IE：Trident</li>
-<li>Safari：Webkit</li>
-<li>Opera：Presto</li>
-</ol>
-<h4 id="如何实现浏览器内多个标签页之间的通信"><a href="#如何实现浏览器内多个标签页之间的通信" class="headerlink" title="如何实现浏览器内多个标签页之间的通信"></a>如何实现浏览器内多个标签页之间的通信</h4><p>调用LocalStorage和Cookies</p>
-<h4 id="减少页面加载时间的方法"><a href="#减少页面加载时间的方法" class="headerlink" title="减少页面加载时间的方法"></a>减少页面加载时间的方法</h4><ol>
-<li><p>减少请求次数</p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>自适应：为不同的设备监理不同的晚归，检测到设备分辨率后调用相应网页，能使网页自适应显示在不同大小终端设备上新网页设计及技术。</li>
+<li>响应式：建立一个网页，通过媒体查询，流式布局，基于内容的断点等技术来改变网页的大小以适应不同分辨率的屏幕</li>
+</ul>
+<h4 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h4><h5 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h5><ol>
+<li><p>三个要素</p>
 <ul>
-<li>CSS spirit（图片小精灵）</li>
-<li>合并js和css文档</li>
+<li><p>流式布局或者弹性布局</p>
+<p><a href="#" target="_blank">点击此处跳转详情</a></p>
+</li>
+<li><p>流式图像：创建可伸缩图像</p>
+<ul>
+<li><p>可伸缩的图像要省略width和height</p>
+</li>
+<li><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">  <span class="attribute">max-width</span>:<span class="number">100%</span>;</div><div class="line">  <span class="comment">/*可伸缩的图像的max-width: 100%。注意max-width:100%和width:100%都可以让图像在容器里伸缩。但是如果容器的宽度超过了图像的宽度，width:100%会使图像放大到容器宽度，这会使图像变形，而在这种情况下，max-width:100%则不会放大图像。*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>background-size可以实现背景图像的缩放</p>
+</li>
+<li><p>video、embed、object{max-width:100%}可以使视频和其他媒体变成可缩放的。</p>
+</li>
 </ul>
 </li>
-<li><p>压缩内容</p>
-</li>
-<li><p>CSS和js位置（视觉上加快页面加载速度）</p>
+<li><p>媒体查询</p>
 <ul>
-<li>CSS放置在head里</li>
-<li>js放置在文档末</li>
+<li><p>一般语法</p>
+<p>@media logic type and(feature:value) and(feature:value)…{…}</p>
+<ul>
+<li>type取screen、print等；</li>
+<li>logic取only或者not；</li>
+<li>feature的表示如下：min-width、max-widthwidth、heightdevice-width、device-heightorientation（方向）、aspect-ratio（高宽比）、color（彩色）、monochrome（单色）、color-index（颜色数）、resolution（分辨率）、scan（扫描）、grid（栅格）、-webkit-device-pixel-ratio-moz-device-pixel-ratio</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<p>根据不同设备的特点分别设计样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> screen and(max-width:<span class="number">600px</span>)&#123;</div><div class="line">  <span class="comment">/*TODO*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>   如果设置max-width，从大往下写，min-width反之</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> screen and(max-width:<span class="number">900px</span>)&#123;&#125;</div><div class="line">@<span class="keyword">media</span> screen and(max-width:<span class="number">800px</span>)&#123;&#125;</div><div class="line"><span class="comment">/*如果检测到分辨率是850px,匹配的是第一个*/</span></div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
 </ul>
 </li>
-<li><p>使用CDN（内容分发网络）</p>
-<ul>
-<li>可以将静态内容放在这些CDN上，请求这些文件时会比较快</li>
-</ul>
+<li><p>定义视觉区</p>
+<p>视觉区（viewport）指的是浏览器的客户区，即显示页面的区域，媒体查询的width就是指的视觉区的宽度。device-width指的是屏幕的宽度。</p>
+<p>桌面电脑的宽度（width）就是屏幕宽度（device-width），而平板和手机会把width扩大几倍，比如说，iPhone的浏览器的视觉区width默认是980px，而皮屏幕宽度实际为320px。</p>
+<p>如果页面设计通过媒体查询考虑了智能手机的情况，则直接使用屏幕宽度作为width，即</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p>width = device-width表示屏幕宽度采用设备宽度，即采用真实的屏幕宽度，initial-scale表示初始不缩放（即缩放比例为100%）</p>
 </li>
-<li><p>DNS预解析</p>
-<ul>
-<li>拥有该属性的域名不需要用户地啊你连接就在后台解析了</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"dns-prefetch"</span> <span class="attr">href</span>=<span class="string">""</span>/&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
+<li><p>关于meta标签的viewpoint属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">device-width,</span> <span class="attr">initial-scale</span>=<span class="string">1.0,</span> <span class="attr">maximum-scale</span>=<span class="string">1.0,</span> <span class="attr">user-scalable</span>=<span class="string">0”/</span>&gt;</span></div></pre></td></tr></table></figure>
 <blockquote>
-<p>总结：与DNS有关的前端优化中有两个部分</p>
-<ol>
-<li>减少DNS的请求次数</li>
-<li>进行DNS预解析</li>
-</ol>
+<p>关于viewpoint属性</p>
+<p>width 控制viewpoint的宽度，可以是固定值，也可以是device-width，即设备的宽度<br>height 高度<br>initial-scale 控制初始化缩放比例，1.0表示不可以缩放<br>maximum-scale 最大缩放比例<br>minimum-scale 最小缩放比例</p>
+<p>user-scalable=0 是否允许用户调整缩放，如果设置为yes则允许用户对其改变，反之则为no，如果设置为no，那么minimum-scale和maximum-scale都将被忽略，用为根本不可能缩放。所有缩放的值都必须在0.01-10的范围之内。</p>
+<p>可见如果不定义viewpoint的话，页面宽度以<strong>屏幕分辨率</strong>为基准，而设置以后可以根据设备宽度来调整页面，达到适配终端大小的效果</p>
 </blockquote>
-<h4 id="WebStorage和Cookies的区别"><a href="#WebStorage和Cookies的区别" class="headerlink" title="WebStorage和Cookies的区别"></a>WebStorage和Cookies的区别</h4><ol>
-<li>WebStorage：容量存储更大<ul>
-<li>session storage：浏览器关闭后数据就丢失失效了</li>
-<li>local storage：浏览器关闭了数据仍可以保存下来，永久存储永不失效</li>
+</li>
+</ol>
+<h5 id="自适应设计"><a href="#自适应设计" class="headerlink" title="自适应设计"></a>自适应设计</h5><ul>
+<li><p>meta标签的viewpoint属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">device-width,</span> <span class="attr">initial-scale</span>=<span class="string">1.0,</span> <span class="attr">maximum-scale</span>=<span class="string">1.0,</span> <span class="attr">user-scalable</span>=<span class="string">0”/</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>不使用绝对宽度</p>
+</li>
+<li><p>相对大小的字体：rem</p>
+</li>
+<li><p>流动布局：float</p>
+</li>
+<li><p>图片自适应</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">  <span class="attribute">max-width</span>:<span class="number">100%</span>;</div><div class="line">  <span class="attribute">height</span>:auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
 </ul>
-</li>
-<li>cookies：大小首先，请求新页面时cookies会被发送过去，浪费带宽</li>
-</ol>
-<h4 id="浏览器CSS兼容性问题"><a href="#浏览器CSS兼容性问题" class="headerlink" title="浏览器CSS兼容性问题"></a>浏览器CSS兼容性问题</h4><ol>
-<li><p>不同浏览器的margin和padding差异较大</p>
-<p>解决方法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">  <span class="attribute">padding</span>:<span class="number">0</span>;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="浏览器js兼容性问题"><a href="#浏览器js兼容性问题" class="headerlink" title="浏览器js兼容性问题"></a>浏览器js兼容性问题</h4><ol>
-<li><p>document.formName.item(”itemName”) 问题：</p>
-<p>IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。 </p>
-<p>解决方法：统一使用document.formName.elements[‘elementName’];</p>
-</li>
-<li><p>window.event问题</p>
-<p>window.event只能在IE下运行，而不能再FireFox下运行，因为FireFox的event还能在事件发生的现场使用</p>
-<p>解决方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  event = event || <span class="built_in">window</span>.event;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Firefox的body在body标签没有被浏览器完全读入之前就存在；而IE的body则必须在body标签被浏览器完全读入之后才存在；</p>
-</li>
-<li><p>innerText在IE中能正常工作，但是innerText在FireFox中却不行，需用textContent；</p>
-<p>解决方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (navigator.appName.indexOf(<span class="string">"Explorer"</span>) &gt; <span class="number">-1</span>) &#123;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'element'</span>).innerText = <span class="string">"my text"</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'element'</span>).textContent = <span class="string">"my text"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p>网上博客：</p>
-<p><a href="http://www.cnblogs.com/cy1121/p/5891904.html" target="_blank" rel="external">js的一些兼容性写法</a></p>
-</blockquote>
-<h4 id="从输入URL到页面展示"><a href="#从输入URL到页面展示" class="headerlink" title="从输入URL到页面展示"></a>从输入URL到页面展示</h4><p><a href="https://jontylu.github.io/jonty_blog/2017/04/19/%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E8%BF%94%E5%9B%9E%E7%BB%8F%E5%8E%86%E4%BA%86%E4%BB%80%E4%B9%88/" target="_blank">点击此处跳转</a></p>
 
       
     </div>
@@ -472,7 +476,11 @@
       
         <div class="post-tags">
           
-            <a href="/jonty_blog/tags/浏览器/" rel="tag"># 浏览器</a>
+            <a href="/jonty_blog/tags/前端/" rel="tag"># 前端</a>
+          
+            <a href="/jonty_blog/tags/响应式/" rel="tag"># 响应式</a>
+          
+            <a href="/jonty_blog/tags/自适应/" rel="tag"># 自适应</a>
           
         </div>
       
@@ -485,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jonty_blog/2017/06/29/前端开发面试知识点——HTML/" rel="next" title="前端开发面试知识点——HTML">
-                <i class="fa fa-chevron-left"></i> 前端开发面试知识点——HTML
+              <a href="/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/" rel="next" title="前端开发面试知识点——Web浏览器">
+                <i class="fa fa-chevron-left"></i> 前端开发面试知识点——Web浏览器
               </a>
             
           </div>
@@ -494,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/jonty_blog/2017/06/29/前端开发面试知识点——自适应和响应式设计/" rel="prev" title="前端开发面试知识点——自适应和响应式设计">
-                前端开发面试知识点——自适应和响应式设计 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -660,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用浏览器和其内核"><span class="nav-number">1.</span> <span class="nav-text">常用浏览器和其内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现浏览器内多个标签页之间的通信"><span class="nav-number">2.</span> <span class="nav-text">如何实现浏览器内多个标签页之间的通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#减少页面加载时间的方法"><span class="nav-number">3.</span> <span class="nav-text">减少页面加载时间的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WebStorage和Cookies的区别"><span class="nav-number">4.</span> <span class="nav-text">WebStorage和Cookies的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器CSS兼容性问题"><span class="nav-number">5.</span> <span class="nav-text">浏览器CSS兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器js兼容性问题"><span class="nav-number">6.</span> <span class="nav-text">浏览器js兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从输入URL到页面展示"><span class="nav-number">7.</span> <span class="nav-text">从输入URL到页面展示</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计"><span class="nav-number">2.</span> <span class="nav-text">设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#响应式设计"><span class="nav-number">2.1.</span> <span class="nav-text">响应式设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自适应设计"><span class="nav-number">2.2.</span> <span class="nav-text">自适应设计</span></a></li></ol></li></ol></div>
             
 
           </div>
