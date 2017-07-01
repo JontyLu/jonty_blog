@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/07/01/前端开发面试知识点——CSS/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="提炼出几个CSS和CSS3的问题~">
-<meta property="og:updated_time" content="2017-07-01T12:49:17.776Z">
+<meta property="og:updated_time" content="2017-07-01T13:48:26.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试知识点——CSS">
 <meta name="twitter:description" content="提炼出几个CSS和CSS3的问题~">
@@ -438,11 +438,12 @@
 </li>
 <li><p>第二种绝对定位的写法</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.son</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">margin</span>: auto;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="BFC（Box、Formatting-Context）：块级格式化上下文"><a href="#BFC（Box、Formatting-Context）：块级格式化上下文" class="headerlink" title="BFC（Box、Formatting Context）：块级格式化上下文"></a>BFC（Box、Formatting Context）：块级格式化上下文</h4><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>BFC是一个独立的渲染区域，其中</p>
+</li>
+</ul>
+<h4 id="BFC（Box、Formatting-Context）：块级格式化上下文"><a href="#BFC（Box、Formatting-Context）：块级格式化上下文" class="headerlink" title="BFC（Box、Formatting Context）：块级格式化上下文"></a>BFC（Box、Formatting Context）：块级格式化上下文</h4><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>  BFC是一个独立的渲染区域，其中</p>
 <ul>
 <li>Box是CSS布局的基本单位，页面由很多个Box组成</li>
-<li>Formatting context是页面中一块渲染区域，有自己的渲染规则，决定了子元素如何定位以及和其他元素的关系和相互作用</li>
-</ul>
+<li><p>Formatting context是页面中一块渲染区域，有自己的渲染规则，决定了子元素如何定位以及和其他元素的关系和相互作用</p>
 <h5 id="BFC布局规则"><a href="#BFC布局规则" class="headerlink" title="BFC布局规则"></a>BFC布局规则</h5><ol>
 <li>内部的Box会在垂直方向，一个接一个地放置。</li>
 <li>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠</li>
