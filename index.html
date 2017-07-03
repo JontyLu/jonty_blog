@@ -270,6 +270,221 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/07/03/前端开发面试知识点——JavaScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jonty">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/jonty_blog/images/portrait.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JontyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/jonty_blog/2017/07/03/前端开发面试知识点——JavaScript/" itemprop="url">
+                  前端开发面试知识点——JavaScript
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T10:29:27+08:00">
+                2017-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/jonty_blog/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <a id="more"></a>
+<h4 id="JavaScript有哪些数据类型"><a href="#JavaScript有哪些数据类型" class="headerlink" title="JavaScript有哪些数据类型"></a>JavaScript有哪些数据类型</h4><ul>
+<li><p>简单数据类型</p>
+<ul>
+<li><p>underfined</p>
+<p>声明了变量后未对其初始化，该值就是undefined</p>
+<blockquote>
+<p>未声明的变量不是undefined，而是会产生错误，但typeof检查的时候是undefined</p>
+</blockquote>
+</li>
+<li><p>Null</p>
+<p>空对象指针</p>
+<blockquote>
+<ol>
+<li>typeof 检测的时候会返回Object</li>
+<li>undefined派生自null，所以 null == undefined的值为true</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Boolean</p>
+<p>只有true和false两个值，而非10</p>
+<table><tr><td>数据类型</td><td>true的情况</td><td>false的情况</td></tr><tr><td>String</td><td>非空字符串</td><td>“”空字符串</td></tr><tr><td>Number</td><td>非零数字（含无穷大）</td><td></td>0和NaN</tr><td>Object</td><td>任何对象</td><td>对象</td><tr><td>undefined</td><td>不适用</td><td></td>undefined</tr></table>
+</li>
+<li><p>Number</p>
+</li>
+<li><p>String</p>
+</li>
+</ul>
+</li>
+<li><p>复杂数据类型</p>
+<p>Object</p>
+</li>
+</ul>
+<h4 id="Apply和call的用法和区别"><a href="#Apply和call的用法和区别" class="headerlink" title="Apply和call的用法和区别"></a>Apply和call的用法和区别</h4><p>两个方法都是在特点的作用域中调用函数</p>
+<ul>
+<li><p>apply()</p>
+<ul>
+<li><p>定义：应用一个对象的方法，用另一个对象替换当前对象</p>
+</li>
+<li><p>参数：一个是<strong>运行函数</strong>的作用域，另一个参数数组。其中第二个参数可以是Array实例，也可以是arguments对象</p>
+</li>
+<li><p>实例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Sum</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum2</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> Sum.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line">alert(callSum2(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//return 3</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>call()</p>
+<ul>
+<li><p>定义：调用一个 对象的方法，用另一个对象替换当前对象</p>
+</li>
+<li><p>参数，一个还是跟apply一样——运行函数的作用域；其他的参数得逐个列举出来</p>
+</li>
+<li><p>实例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Sum</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum2</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> Sum.call(<span class="keyword">this</span>,num1,num2);<span class="comment">//逐个列举传入的参数</span></div><div class="line">&#125;</div><div class="line">alert(callSum2(<span class="number">1</span>,<span class="number">3</span>));<span class="comment">//return 4</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h5><p>区别仅在于接受参数的方式不同，第一个参数是没有变化的，变化的是call的其余参数都需要逐个列举出来，而apply可以传入arguments或者数组。</p>
+<h4 id="js事件绑定的几种方法"><a href="#js事件绑定的几种方法" class="headerlink" title="js事件绑定的几种方法"></a>js事件绑定的几种方法</h4><h5 id="在DOM中直接绑定"><a href="#在DOM中直接绑定" class="headerlink" title="在DOM中直接绑定"></a>在DOM中直接绑定</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span> <span class="attr">type</span>=<span class="string">"button"</span><span class="attr">value</span>=<span class="string">"click me "</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"666"</span>);</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="在JavaScript代码中绑定"><a href="#在JavaScript代码中绑定" class="headerlink" title="在JavaScript代码中绑定"></a>在JavaScript代码中绑定</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>.getAttrbute(<span class="string">"type"</span>));<span class="comment">//获得当前发生事件的HTML元素的属性</span></div><div class="line">    <span class="comment">//this.tagName:获取元素名称</span></div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="绑定事件监听函数"><a href="#绑定事件监听函数" class="headerlink" title="绑定事件监听函数"></a>绑定事件监听函数</h5><p>利用addEventListener(event, function,useCapture)，其中第三个参数是布尔值，可选捕获（true）或者冒泡（false），默认是false。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   alert(<span class="string">"777"</span>);</div><div class="line"> &#125;，<span class="literal">true</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>因为IE8以下不支持该方法，所以需要利用attachEvent进行兼容性处理</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</div><div class="line"><span class="keyword">if</span>(x.addEventListener)&#123;</div><div class="line">  <span class="comment">//IE8以上和其他主流浏览器</span></div><div class="line">  x.addEventListener(<span class="string">"click"</span>,myFunction);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">  x.attachEvent(<span class="string">"onclick"</span>,myFunction);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h4><ul>
+<li><p>作用：使用事件委托技术能让你避免<strong>对特定的每个节点添加事件监听器</strong>；相反，事件监听器是被添加到它们的<strong>父元素</strong>上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。</p>
+</li>
+<li><p>实例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//父元素添加监听器</span></div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"parentNode"</span>).addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  <span class="comment">//event是对象，事件源，在这里被操作了的元素就是事件源，即为被点击的元素</span></div><div class="line">  <span class="keyword">var</span> event = event || <span class="built_in">window</span>.event;<span class="comment">//兼容性写法</span></div><div class="line">  <span class="keyword">var</span> target = event.target || event.srcElement;<span class="comment">//兼容性写法</span></div><div class="line">  <span class="keyword">if</span>(event.target &amp;&amp; target.nodeName.toLowCase() =<span class="string">"li"</span>)&#123;</div><div class="line">    <span class="comment">//target.nodeName 返回的是LI大写</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"the li has been clicked~"</span>);</div><div class="line">  &#125;</div><div class="line">&#125;,<span class="literal">false</span>);<span class="comment">//false是冒泡</span></div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/07/01/前端开发面试知识点——CSS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1597,153 +1812,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://jontylu.github.io/jonty_blog/jonty_blog/2017/04/19/jQuey-Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jonty">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/jonty_blog/images/portrait.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JontyBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/jonty_blog/2017/04/19/jQuey-Note/" itemprop="url">
-                  jQuery_Note
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T10:38:17+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/jonty_blog/categories/jQuery/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="jQuery知识点"><a href="#jQuery知识点" class="headerlink" title="jQuery知识点"></a>jQuery知识点</h1><h2 id="jQuery入门"><a href="#jQuery入门" class="headerlink" title="jQuery入门"></a>jQuery入门</h2><h3 id="jQuery库延迟等待加载模式"><a href="#jQuery库延迟等待加载模式" class="headerlink" title="jQuery库延迟等待加载模式"></a>jQuery库延迟等待加载模式</h3><p>实际应用中，一般很少使用window.onload事件来实现延迟等待加载：该事件关联的方法需要等待图片等大型元素加载完成之后才能执行：会导致：页面已经展开，图片还在缓慢加载，JavaScript交互功能假死状态（加入网速很慢），且只能执行一次；（究其原因因为jQuery的ready事件在图片加载前就完成了）</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jonty_blog/2017/04/19/jQuey-Note/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1793,7 +1861,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/jonty_blog/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
