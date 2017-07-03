@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="总结了一些关于浏览器的知识点">
-<meta property="og:updated_time" content="2017-06-29T08:19:05.881Z">
+<meta property="og:updated_time" content="2017-07-02T03:24:57.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试知识点——Web浏览器">
 <meta name="twitter:description" content="总结了一些关于浏览器的知识点">
@@ -429,7 +429,9 @@
 <li><p>window.event问题</p>
 <p>window.event只能在IE下运行，而不能再FireFox下运行，因为FireFox的event还能在事件发生的现场使用</p>
 <p>解决方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  event = event || <span class="built_in">window</span>.event;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  event = event || <span class="built_in">window</span>.event;</div><div class="line">  <span class="comment">//如果还要获取发生事件的那个元素</span></div><div class="line">  <span class="keyword">var</span> obj = event.srcElement || event.target;</div><div class="line">  <span class="comment">//输出元素名称</span></div><div class="line">  alert(obj.tagName.toLowerCase());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>​</p>
 </li>
 <li><p>Firefox的body在body标签没有被浏览器完全读入之前就存在；而IE的body则必须在body标签被浏览器完全读入之后才存在；</p>
 </li>
