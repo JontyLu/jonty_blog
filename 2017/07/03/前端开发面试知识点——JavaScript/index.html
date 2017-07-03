@@ -87,58 +87,28 @@
 
 
 
-<meta name="description" content="JavaScript有哪些数据类型
-简单数据类型
+<meta name="description" content="JavaScript的组成
 
-underfined
-声明了变量后未对其初始化，该值就是undefined
-
-未声明的变量不是undefined，而是会产生错误，但typeof检查的时候是undefined
-
-
-Null
-空对象指针
-
-
-typeof 检测的时候会返回Object
-undefined派生自null，所以 null == undefined的值为true">
+核心（ECMAScript）：描述了语言的语法和基本对象
+文档对象模型（DOM）：处理网页的方法和接口
+浏览器对象模型（BOM）：与浏览器进行交互的方法和接口">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端开发面试知识点——JavaScript">
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/07/03/前端开发面试知识点——JavaScript/index.html">
 <meta property="og:site_name" content="JontyBlog">
-<meta property="og:description" content="JavaScript有哪些数据类型
-简单数据类型
+<meta property="og:description" content="JavaScript的组成
 
-underfined
-声明了变量后未对其初始化，该值就是undefined
-
-未声明的变量不是undefined，而是会产生错误，但typeof检查的时候是undefined
-
-
-Null
-空对象指针
-
-
-typeof 检测的时候会返回Object
-undefined派生自null，所以 null == undefined的值为true">
-<meta property="og:updated_time" content="2017-07-03T03:49:29.442Z">
+核心（ECMAScript）：描述了语言的语法和基本对象
+文档对象模型（DOM）：处理网页的方法和接口
+浏览器对象模型（BOM）：与浏览器进行交互的方法和接口">
+<meta property="og:updated_time" content="2017-07-03T06:12:54.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试知识点——JavaScript">
-<meta name="twitter:description" content="JavaScript有哪些数据类型
-简单数据类型
+<meta name="twitter:description" content="JavaScript的组成
 
-underfined
-声明了变量后未对其初始化，该值就是undefined
-
-未声明的变量不是undefined，而是会产生错误，但typeof检查的时候是undefined
-
-
-Null
-空对象指针
-
-
-typeof 检测的时候会返回Object
-undefined派生自null，所以 null == undefined的值为true">
+核心（ECMAScript）：描述了语言的语法和基本对象
+文档对象模型（DOM）：处理网页的方法和接口
+浏览器对象模型（BOM）：与浏览器进行交互的方法和接口">
 
 
 
@@ -405,7 +375,13 @@ undefined派生自null，所以 null == undefined的值为true">
       
 
       
-        <a id="more"></a>
+        <p>JavaScript的组成</p>
+<ul>
+<li>核心（ECMAScript）：描述了语言的语法和基本对象</li>
+<li>文档对象模型（DOM）：处理网页的方法和接口</li>
+<li>浏览器对象模型（BOM）：与浏览器进行交互的方法和接口</li>
+</ul>
+<a id="more"></a>
 <h4 id="JavaScript有哪些数据类型"><a href="#JavaScript有哪些数据类型" class="headerlink" title="JavaScript有哪些数据类型"></a>JavaScript有哪些数据类型</h4><ul>
 <li><p>简单数据类型</p>
 <ul>
@@ -437,6 +413,19 @@ undefined派生自null，所以 null == undefined的值为true">
 <li><p>复杂数据类型</p>
 <p>Object</p>
 </li>
+</ul>
+<h4 id="基本类型和引用类型有什么区别"><a href="#基本类型和引用类型有什么区别" class="headerlink" title="基本类型和引用类型有什么区别"></a>基本类型和引用类型有什么区别</h4><p>基本类型如上</p>
+<p>引用类型</p>
+<ul>
+<li>Object</li>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Function</li>
+</ul>
+<h4 id="怎么检测类型"><a href="#怎么检测类型" class="headerlink" title="怎么检测类型"></a>怎么检测类型</h4><ul>
+<li>检测基本类型，使用typeof操作符</li>
+<li>检测引用类型可以使用instanceof操作符</li>
 </ul>
 <h4 id="Apply和call的用法和区别"><a href="#Apply和call的用法和区别" class="headerlink" title="Apply和call的用法和区别"></a>Apply和call的用法和区别</h4><p>两个方法都是在特点的作用域中调用函数</p>
 <ul>
@@ -475,9 +464,57 @@ undefined派生自null，所以 null == undefined的值为true">
 </li>
 <li><p>实例</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//父元素添加监听器</span></div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"parentNode"</span>).addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  <span class="comment">//event是对象，事件源，在这里被操作了的元素就是事件源，即为被点击的元素</span></div><div class="line">  <span class="keyword">var</span> event = event || <span class="built_in">window</span>.event;<span class="comment">//兼容性写法</span></div><div class="line">  <span class="keyword">var</span> target = event.target || event.srcElement;<span class="comment">//兼容性写法</span></div><div class="line">  <span class="keyword">if</span>(event.target &amp;&amp; target.nodeName.toLowCase() =<span class="string">"li"</span>)&#123;</div><div class="line">    <span class="comment">//target.nodeName 返回的是LI大写</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"the li has been clicked~"</span>);</div><div class="line">  &#125;</div><div class="line">&#125;,<span class="literal">false</span>);<span class="comment">//false是冒泡</span></div></pre></td></tr></table></figure>
-<p>​</p>
 </li>
 </ul>
+<h4 id="关于this"><a href="#关于this" class="headerlink" title="关于this"></a>关于this</h4><p>五种使用场景</p>
+<ul>
+<li><p>作为函数调用</p>
+<p>this绑定全局对象（浏览器环境的全局对象为window），内部函数的内部函数的this也绑定全局对象，应该绑定到外层函数对应的对象上</p>
+</li>
+<li><p>作为构造函数使用</p>
+<p>this绑定到新创建的对象</p>
+</li>
+<li><p>作为对象方法使用</p>
+<p>this绑定到该对象</p>
+</li>
+<li><p>使用apply和call调用this将会被显示设置为函数调用的第一个参数</p>
+</li>
+</ul>
+<h4 id="事件冒泡机制"><a href="#事件冒泡机制" class="headerlink" title="事件冒泡机制"></a>事件冒泡机制</h4><p>从目标元素开始，往顶层元素传播。途中如果有节点绑定了相应的事件处理函数，这些函数都会被一次触发。如果想阻止事件起泡，可以使用e.stopPropagation()（Firefox）或者e.cancelBubble=true（IE）来组织事件的冒泡传播。</p>
+<h4 id="document-load和document-ready两个事件的区别"><a href="#document-load和document-ready两个事件的区别" class="headerlink" title="document load和document ready两个事件的区别"></a>document load和document ready两个事件的区别</h4><p>页面加载完成有两种事件</p>
+<ul>
+<li><p>ready</p>
+<p>表示文档结构已经加载完成（不包含图片等非文字媒体文件）</p>
+</li>
+<li><p>onload</p>
+<p>表示页面包含图片等文件在内的所有元素都加载完成了</p>
+</li>
+</ul>
+<h4 id="DOM的加载步骤"><a href="#DOM的加载步骤" class="headerlink" title="DOM的加载步骤"></a>DOM的加载步骤</h4><ol>
+<li>解析HTML的结构</li>
+<li>加载外部脚本和样式表文件</li>
+<li>解析并执行脚本代码</li>
+<li>构造HTMLDOM模型（ready事件）</li>
+<li>加载图片等外部文件</li>
+<li>页面加载完毕（load事件）</li>
+</ol>
+<p>ready事件在DOM结构绘制完成之后就会执行，可以确保就算有大量图像文件没加载出来，JavaScript代码一样可以运行</p>
+<h4 id="DOM包含哪些对象"><a href="#DOM包含哪些对象" class="headerlink" title="DOM包含哪些对象"></a>DOM包含哪些对象</h4><ul>
+<li><p>方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">getElementById()</div><div class="line">getElementsByTagName()</div><div class="line">appendChild(node)</div><div class="line">removeChild(node)</div><div class="line">replaceChild()</div><div class="line">insertChild()</div><div class="line">createElement()</div><div class="line">createTextNode()</div><div class="line">getAttribute()</div><div class="line">setAttribute()</div></pre></td></tr></table></figure>
+</li>
+<li><p>属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">innerHTML  节点(元素)的文本值</div><div class="line">parentNode  节点(元素)的父节点</div><div class="line">childNodes </div><div class="line">attributes   节点(元素)的属性节点</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="面向对象的特点"><a href="#面向对象的特点" class="headerlink" title="面向对象的特点"></a>面向对象的特点</h4><ul>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<h4 id="ES6新特性（待定）"><a href="#ES6新特性（待定）" class="headerlink" title="ES6新特性（待定）"></a>ES6新特性（待定）</h4><h4 id="遍历DOM数的5种方法"><a href="#遍历DOM数的5种方法" class="headerlink" title="遍历DOM数的5种方法"></a>遍历DOM数的5种方法</h4><p>参考链接：<a href="http://www.cnblogs.com/tracylin/p/5220867.html" target="_blank" rel="external">Click me</a></p>
+<h4 id="js异步编程如何实现"><a href="#js异步编程如何实现" class="headerlink" title="js异步编程如何实现"></a>js异步编程如何实现</h4><p>参考链接：<a href="http://www.cnblogs.com/haoyijing/p/5737951.html" target="_blank" rel="external">Click me</a></p>
+<h4 id="图片预加载"><a href="#图片预加载" class="headerlink" title="图片预加载"></a>图片预加载</h4><p>参考链接：<a href="http://www.cnblogs.com/haoyijing/p/5818236.html#imgLoad2" target="_blank" rel="external">Click me</a></p>
 
       
     </div>
@@ -693,7 +730,7 @@ undefined派生自null，所以 null == undefined的值为true">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript有哪些数据类型"><span class="nav-number">1.</span> <span class="nav-text">JavaScript有哪些数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Apply和call的用法和区别"><span class="nav-number">2.</span> <span class="nav-text">Apply和call的用法和区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#区别"><span class="nav-number">2.1.</span> <span class="nav-text">区别</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js事件绑定的几种方法"><span class="nav-number">3.</span> <span class="nav-text">js事件绑定的几种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在DOM中直接绑定"><span class="nav-number">3.1.</span> <span class="nav-text">在DOM中直接绑定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在JavaScript代码中绑定"><span class="nav-number">3.2.</span> <span class="nav-text">在JavaScript代码中绑定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绑定事件监听函数"><span class="nav-number">3.3.</span> <span class="nav-text">绑定事件监听函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件委托"><span class="nav-number">4.</span> <span class="nav-text">事件委托</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript有哪些数据类型"><span class="nav-number">1.</span> <span class="nav-text">JavaScript有哪些数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本类型和引用类型有什么区别"><span class="nav-number">2.</span> <span class="nav-text">基本类型和引用类型有什么区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么检测类型"><span class="nav-number">3.</span> <span class="nav-text">怎么检测类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Apply和call的用法和区别"><span class="nav-number">4.</span> <span class="nav-text">Apply和call的用法和区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#区别"><span class="nav-number">4.1.</span> <span class="nav-text">区别</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js事件绑定的几种方法"><span class="nav-number">5.</span> <span class="nav-text">js事件绑定的几种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在DOM中直接绑定"><span class="nav-number">5.1.</span> <span class="nav-text">在DOM中直接绑定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在JavaScript代码中绑定"><span class="nav-number">5.2.</span> <span class="nav-text">在JavaScript代码中绑定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绑定事件监听函数"><span class="nav-number">5.3.</span> <span class="nav-text">绑定事件监听函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件委托"><span class="nav-number">6.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于this"><span class="nav-number">7.</span> <span class="nav-text">关于this</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件冒泡机制"><span class="nav-number">8.</span> <span class="nav-text">事件冒泡机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-load和document-ready两个事件的区别"><span class="nav-number">9.</span> <span class="nav-text">document load和document ready两个事件的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM的加载步骤"><span class="nav-number">10.</span> <span class="nav-text">DOM的加载步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM包含哪些对象"><span class="nav-number">11.</span> <span class="nav-text">DOM包含哪些对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面向对象的特点"><span class="nav-number">12.</span> <span class="nav-text">面向对象的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6新特性（待定）"><span class="nav-number">13.</span> <span class="nav-text">ES6新特性（待定）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历DOM数的5种方法"><span class="nav-number">14.</span> <span class="nav-text">遍历DOM数的5种方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js异步编程如何实现"><span class="nav-number">15.</span> <span class="nav-text">js异步编程如何实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片预加载"><span class="nav-number">16.</span> <span class="nav-text">图片预加载</span></a></li></ol></div>
             
 
           </div>
