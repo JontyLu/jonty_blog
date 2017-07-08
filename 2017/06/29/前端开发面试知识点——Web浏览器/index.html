@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——Web浏览器/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="总结了一些关于浏览器的知识点">
-<meta property="og:updated_time" content="2017-07-02T03:24:57.638Z">
+<meta property="og:updated_time" content="2017-07-08T06:59:37.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试知识点——Web浏览器">
 <meta name="twitter:description" content="总结了一些关于浏览器的知识点">
@@ -372,6 +372,15 @@
 <li>Safari：Webkit</li>
 <li>Opera：Presto</li>
 </ol>
+<h4 id="对浏览器内核的理解"><a href="#对浏览器内核的理解" class="headerlink" title="对浏览器内核的理解"></a>对浏览器内核的理解</h4><p>浏览器内核有两个</p>
+<ul>
+<li><p>渲染引擎</p>
+<p>取得网页内容，解释显示</p>
+</li>
+<li><p>JS引擎</p>
+<p>解析和执行JS代码</p>
+</li>
+</ul>
 <h4 id="如何实现浏览器内多个标签页之间的通信"><a href="#如何实现浏览器内多个标签页之间的通信" class="headerlink" title="如何实现浏览器内多个标签页之间的通信"></a>如何实现浏览器内多个标签页之间的通信</h4><p>调用LocalStorage和Cookies</p>
 <h4 id="减少页面加载时间的方法"><a href="#减少页面加载时间的方法" class="headerlink" title="减少页面加载时间的方法"></a>减少页面加载时间的方法</h4><ol>
 <li><p>减少请求次数</p>
@@ -445,6 +454,12 @@
 <p><a href="http://www.cnblogs.com/cy1121/p/5891904.html" target="_blank" rel="external">js的一些兼容性写法</a></p>
 </blockquote>
 <h4 id="从输入URL到页面展示"><a href="#从输入URL到页面展示" class="headerlink" title="从输入URL到页面展示"></a>从输入URL到页面展示</h4><p><a href="https://jontylu.github.io/jonty_blog/2017/04/19/%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E8%BF%94%E5%9B%9E%E7%BB%8F%E5%8E%86%E4%BA%86%E4%BB%80%E4%B9%88/" target="_blank">点击此处跳转</a></p>
+<h4 id="webSocket-如何兼容低浏览器？"><a href="#webSocket-如何兼容低浏览器？" class="headerlink" title="webSocket 如何兼容低浏览器？"></a>webSocket 如何兼容低浏览器？</h4><ul>
+<li>Adobe Flash Socket</li>
+<li>ActiveX HTMLFile（IE）</li>
+<li>基于 multipart 编码发送 XHR</li>
+<li>基于长轮询的 XHR</li>
+</ul>
 
       
     </div>
@@ -662,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用浏览器和其内核"><span class="nav-number">1.</span> <span class="nav-text">常用浏览器和其内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现浏览器内多个标签页之间的通信"><span class="nav-number">2.</span> <span class="nav-text">如何实现浏览器内多个标签页之间的通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#减少页面加载时间的方法"><span class="nav-number">3.</span> <span class="nav-text">减少页面加载时间的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WebStorage和Cookies的区别"><span class="nav-number">4.</span> <span class="nav-text">WebStorage和Cookies的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器CSS兼容性问题"><span class="nav-number">5.</span> <span class="nav-text">浏览器CSS兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器js兼容性问题"><span class="nav-number">6.</span> <span class="nav-text">浏览器js兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从输入URL到页面展示"><span class="nav-number">7.</span> <span class="nav-text">从输入URL到页面展示</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用浏览器和其内核"><span class="nav-number">1.</span> <span class="nav-text">常用浏览器和其内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对浏览器内核的理解"><span class="nav-number">2.</span> <span class="nav-text">对浏览器内核的理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现浏览器内多个标签页之间的通信"><span class="nav-number">3.</span> <span class="nav-text">如何实现浏览器内多个标签页之间的通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#减少页面加载时间的方法"><span class="nav-number">4.</span> <span class="nav-text">减少页面加载时间的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WebStorage和Cookies的区别"><span class="nav-number">5.</span> <span class="nav-text">WebStorage和Cookies的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器CSS兼容性问题"><span class="nav-number">6.</span> <span class="nav-text">浏览器CSS兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器js兼容性问题"><span class="nav-number">7.</span> <span class="nav-text">浏览器js兼容性问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从输入URL到页面展示"><span class="nav-number">8.</span> <span class="nav-text">从输入URL到页面展示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webSocket-如何兼容低浏览器？"><span class="nav-number">9.</span> <span class="nav-text">webSocket 如何兼容低浏览器？</span></a></li></ol></div>
             
 
           </div>

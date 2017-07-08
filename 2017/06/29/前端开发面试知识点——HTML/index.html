@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://jontylu.github.io/jonty_blog/2017/06/29/前端开发面试知识点——HTML/index.html">
 <meta property="og:site_name" content="JontyBlog">
 <meta property="og:description" content="前端开发面试之-HTML">
-<meta property="og:updated_time" content="2017-07-01T13:49:48.163Z">
+<meta property="og:updated_time" content="2017-07-08T06:41:16.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试知识点——HTML">
 <meta name="twitter:description" content="前端开发面试之-HTML">
@@ -372,6 +372,13 @@
 <li>便于团队开发维护</li>
 </ul>
 <h4 id="Doctype作用"><a href="#Doctype作用" class="headerlink" title="Doctype作用"></a>Doctype作用</h4><p>告知浏览器以何种模式来渲染文档</p>
+<blockquote>
+<p>有两种模式</p>
+<ul>
+<li>怪异模式（浏览器自己的模式）和标准模式（W3C标准解析）</li>
+<li>如果没有声明，则不同浏览器用自己的方式来解析，会呈现不同的样式</li>
+</ul>
+</blockquote>
 <h4 id="HTML和XHMTL的区别"><a href="#HTML和XHMTL的区别" class="headerlink" title="HTML和XHMTL的区别"></a>HTML和XHMTL的区别</h4><p>XHMTL：书写要求比HTML更加的严格</p>
 <ul>
 <li>所有的标记必须要有结束标记</li>
@@ -383,9 +390,94 @@
 </ul>
 <h4 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h4><ul>
 <li>优点：可以加载广告等</li>
-<li>缺点：iframe会阻塞页面的onload事件</li>
+<li>缺点<ul>
+<li>iframe会阻塞页面的onload事件</li>
+<li>搜索引擎的检索程序无法解读该页面，不利于SEO</li>
+<li>iframe和主页面共享连接池，而浏览器对相同域的链接有限制，会影响页面的并行加载</li>
 </ul>
+</li>
+</ul>
+<h4 id="Label标签"><a href="#Label标签" class="headerlink" title="Label标签"></a>Label标签</h4><p>该标签的for可以绑定另外一个元素的id上</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"male"</span>&gt;</span>Male<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">id</span>=<span class="string">"male"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"female"</span>&gt;</span>Female<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">id</span>=<span class="string">"female"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="src和href的区别"><a href="#src和href的区别" class="headerlink" title="src和href的区别"></a>src和href的区别</h4><p>前者是引入，如img和script</p>
+<p>后者是引用，如a标签和link</p>
 <h4 id="document-write和innerHTML"><a href="#document-write和innerHTML" class="headerlink" title="document.write和innerHTML"></a>document.write和innerHTML</h4><p>前者是重绘整个页面，后者只改变其中一个部分</p>
+<h4 id="HTML有哪些新特性"><a href="#HTML有哪些新特性" class="headerlink" title="HTML有哪些新特性?"></a>HTML有哪些新特性?</h4><ul>
+<li><p>语义特性</p>
+<p>header、article、footer、nav、aside等新标签，有利于搜索引擎爬取</p>
+</li>
+<li><p>本地存储特性</p>
+<p>HTML5提供了网页存储的API，离线存储包含了：</p>
+<ol>
+<li>应用程序缓存</li>
+<li>本地存储：localStorage和sessionStorage</li>
+<li>索引数据库</li>
+<li>文件接口</li>
+</ol>
+</li>
+<li><p>设备访问特性</p>
+<ol>
+<li>地理位置API：获取当前位置</li>
+<li>媒体访问API：获取视频等</li>
+<li>设备方向和运动API：常用于重力感应方向</li>
+</ol>
+</li>
+<li><p>连接特性</p>
+<p>HTTP是无连接，一次请求，一次响应，长连接的效果需要用轮询的方法，但很浪费资源。</p>
+<ol>
+<li>Web Sockets</li>
+<li>服务器发送事件（Server-Sent Events）</li>
+</ol>
+</li>
+<li><p>网页多媒体特性</p>
+<ol>
+<li>Audio和Video标签</li>
+<li>Audio API：可以直接在代码中操作原始的音频流数据，对其进行任意加工再造</li>
+</ol>
+</li>
+<li><p>三维、图形和特效特性</p>
+<ol>
+<li>SVG（可缩放矢量图形）</li>
+<li>Canvas（画布）</li>
+<li>网页图形库（WebGL）：3D绘图标准，用于创建具有复杂3D结构的网站页面，可以设计成3D网页游戏</li>
+</ol>
+</li>
+<li><p>性能与集成特性</p>
+<ol>
+<li><p>WEB Workers（网页后台任务）：解决了JS无法多线程的问题</p>
+<p>运行在浏览器后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 Web Workers 在后台运行。</p>
+</li>
+<li><p>XMLHttpRequest2（新的Ajax）</p>
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><a href="http://blog.csdn.net/gane_cheng/article/details/52819118" target="_blank" rel="external">这里有一篇博客写得很好~Click me!</a></p>
+</blockquote>
+<h4 id="请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h4><ol>
+<li><p>共同点</p>
+<p>都是保存在浏览器端，且同源</p>
+</li>
+<li><p>区别</p>
+<ul>
+<li><p>cookie</p>
+<p>cookie在浏览器和服务器间来回传递，占用网络资源，而且携带数据小</p>
+</li>
+<li><p>sessionStorage</p>
+<p>存储量大，但因为窗口关闭前数据有效，不是永久保存的</p>
+</li>
+<li><p>localStorage</p>
+<p>存储量大，保存在本地，除非手动删除，否则是永久性的保存的</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="canvas和SVG的区别？"><a href="#canvas和SVG的区别？" class="headerlink" title="canvas和SVG的区别？"></a>canvas和SVG的区别？</h4><p>两者都允许在浏览器中创建图形，但在根本上是不同的</p>
+<ul>
+<li>前者是通过JS来绘制图形，逐像素进行渲染，依赖分辨率，不支持事件处理器，会被频繁重绘</li>
+<li>后者基于XML描述图形的语言，可以被JS操作，不依赖分辨率，支持事件处理器，适合带有大型渲染区域的应用程序如地图</li>
+</ul>
 <blockquote>
 <p>关于HTML和HTML5其他重点，可以参照我同学的博客~</p>
 <p><a href="http://blog.csdn.net/qq_32524751/article/details/73972277" target="_blank" rel="external">Click me </a></p>
@@ -609,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#对语义化的理解"><span class="nav-number">1.</span> <span class="nav-text">对语义化的理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Doctype作用"><span class="nav-number">2.</span> <span class="nav-text">Doctype作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML和XHMTL的区别"><span class="nav-number">3.</span> <span class="nav-text">HTML和XHMTL的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iframe"><span class="nav-number">4.</span> <span class="nav-text">iframe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write和innerHTML"><span class="nav-number">5.</span> <span class="nav-text">document.write和innerHTML</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#对语义化的理解"><span class="nav-number">1.</span> <span class="nav-text">对语义化的理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Doctype作用"><span class="nav-number">2.</span> <span class="nav-text">Doctype作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML和XHMTL的区别"><span class="nav-number">3.</span> <span class="nav-text">HTML和XHMTL的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iframe"><span class="nav-number">4.</span> <span class="nav-text">iframe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Label标签"><span class="nav-number">5.</span> <span class="nav-text">Label标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#src和href的区别"><span class="nav-number">6.</span> <span class="nav-text">src和href的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write和innerHTML"><span class="nav-number">7.</span> <span class="nav-text">document.write和innerHTML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML有哪些新特性"><span class="nav-number">8.</span> <span class="nav-text">HTML有哪些新特性?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><span class="nav-number">9.</span> <span class="nav-text">请描述一下 cookies，sessionStorage 和 localStorage 的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#canvas和SVG的区别？"><span class="nav-number">10.</span> <span class="nav-text">canvas和SVG的区别？</span></a></li></ol></div>
             
 
           </div>
